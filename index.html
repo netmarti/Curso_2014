@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>Primera pagina web de PONER AQUI EL NOMBRE</title>
+		<meta name="description" content="">
+		<meta name="author" content="NOMBRE">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">8+
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<h1>Pagina HTML de NOMBRE</h1>
+				<h2>Ejemplo de segunda cabecera</h2>
+				
+			</header>
+			<!--3. Línea que ocupe todo el ancho de la página para separar el título del contenido de la página.-->
+			<hr />
+			
+			<!-- 4. Dos párrafos de várias lineas  donde os presentéis (nombre, apellidos, email).-->
+			<p>
+				Primer párrafo de presentación. Aquí debes escribir tu texto. Pueden ser varias líneas.
+			</p>
+			<p>
+				Segundo párrafo de presentación. Lo mismo que el anterior, con más detalle o sobre otro tema que te interese.
+			</p>
+			<!--5. Selecciona una imagen para añadir a tu web. Y descomenta la línea siguiente -->
+			<!--img src="miImagen.gif" / -->
+			<!-- Salto de linea>
+			<br /> 
+			<!--6. Un enlace con la página web de Google. Cambialo por un enlace a tu blog o a un tu web favorita -->
+			<a href="http://www.google.com" title="Google el buscador">
+				El buscador de Google
+			</a>
+			<!--7. Lista ordenada de tus  películas favoritas enumeradas de menor a mayor. -->
+			<ol>
+				<li>Primera peli</li>
+				<li>Segunda peli</li>
+				<li>Tercera peli</li>
+				<li>Cuarta peli</li>
+				<li>Quinta peli</li>
+				<li>Sexta peli</li>
+				<li></li>
+			</ol>
+			<!--8. Lista sin numeración de tus 5 principales aficiones. -->
+			<ul>
+				<li>Una afición</li>
+				<li>Otra afición</li>
+				<li>Otra afición ...</li>
+				<li>Otra afición...</li>
+				<li>Otra afición</li>
+			</ul>
+			
+			<!--9. Lista con las definiciones de los tags <div> y <span>. 
+				Para poner los < i > debemos utilizar la codificación HTML
+				ej: http://librosweb.es/xhtml/capitulo_3/codificacion_de_caracteres.html
+				-->
+			<dl>
+				<dt> &lt; div &gt;</dt>
+					<dd>Elemento de bloque que agrupa otros elementos (inline o bloque) principalmente para ordenarlos visualmente. </dd>
+				<dt> &lt; span &gt;</dt>
+					<dd>Elemento inline que agrupa otros elementos inline principalmente para ordenarlos visualmente.</dd>
+			</dl>
+			
+			<table border="1">
+				<thead>
+					<tr>
+						<td> HORARIO </td> <td>LUNES</td>  <td>MARTES</td> <td>MIERCOLES</td> <td>JUEVES</td> <td>VIERNES</td>	
+					</tr>
+				</thead>
+				<tfoot>	<!-- A pesar de que el tfoot se escribe a continuación del thead, se mostrará al final -->
+					<tr>
+						<td>TOTAL: 6h</td>
+						<td > 6</td> <!-- LUNES -->
+						<td>  5</td><!-- MARTES -->
+						<td > 6</td> <!-- MIERCOLES -->
+						<td> 5</td><!-- JUEVES -->
+						<td> 6</td> <!-- VIERNES -->
+					</tr>
+										
+				</tfoot>
+				<tbody>
+					<tr>
+						<td>8:00<br />8:55</td>
+						<td rowspan="3"> LENGMAR<br/>NOMBRE DEL PROFESOR</td> <!-- LUNES: celda que ocupa las 3 filas siguientes -->
+						<td>  </td><!-- MARTES -->
+						<td rowspan="3"> LENGMAR<br/>NOMBRE DEL PROFESOR</td> <!-- MIERCOLES celda que ocupa las 3 filas siguientes -->
+						<td> </td><!-- JUEVES -->
+						<td rowspan="3"> LENGMAR<br/>NOMBRE DEL PROFESOR</td> <!-- VIERNES  celda que ocupa las 3 filas siguientes -->
+					</tr>
+					<tr>
+						<td>8:55<br />9:50</td>
+						<!--<td> LENGMAR<br/>NOMBRE DEL PROFESOR</td>  LUNES: celda compartida con la fila anterior -->
+						<td rowspan="2"> LENGMAR<br/>NOMBRE DEL PROFESOR</td><!-- MARTES -->
+						<!--<td> </td>  MIERCOLES : celda compartida con la fila anterior-->
+						<td rowspan="2"> LENGMAR<br/>NOMBRE DEL PROFESOR</td><!-- JUEVES -->
+						<!--<td> LENGMAR<br/>NOMBRE DEL PROFESOR</td>  VIERNES: celda compartida con la fila anterior-->
+					</tr>
+					<tr>
+						<td>10:50<br />10:45</td>
+						<!--<td> LENGMAR<br/>NOMBRE DEL PROFESOR</td>  LUNES: celda compartida con la fila anterior -->
+						<!--<td> LENGMAR<br/>NOMBRE DEL PROFESOR</td> MARTES : celda compartida con la fila anterior -->
+						<!--<td> </td>  MIERCOLES : celda compartida con la fila anterior -->
+						<!--<td> LENGMAR<br/>NOMBRE DEL PROFESOR</td> JUEVES  : celda compartida con la fila anterior -->
+						<!--<td> LENGMAR<br/>NOMBRE DEL PROFESOR</td>  VIERNES: celda compartida con la fila anterior -->
+					</tr>
+					<tr>
+						<td>10:50<br />11:15</td>
+						<td colspan="5"> DESCANSO </td> <!-- MIERCOLES : celda que ocupa las 5 columnas-->
+					</tr>
+					<tr>
+						<td>11:15<br />12:10</td>
+						<td rowspan="3"> LENGMAR<br/>NOMBRE DEL PROFESOR</td> <!-- LUNES: celda que ocupa las 3 filas siguientes -->
+						<td rowspan="3"> LENGMAR<br/>NOMBRE DEL PROFESOR</td><!-- MARTES  celda que ocupa las 2 filas siguientes -->
+						<td rowspan="3"> IAWEB<br/>NOMBRE DEL PROFESOR</td> <!-- MIERCOLES celda que ocupa las 3 filas siguientes -->
+						<td> LENGMAR<br/>NOMBRE DEL PROFESOR</td><!-- JUEVES -->
+						<td> IAWEB<br/>NOMBRE DEL PROFESOR</td> <!-- VIERNES  celda que ocupa las 3 filas siguientes -->
+					</tr>
+					<tr>
+						<td>12:10<br />13:05</td>
+						<!--LUNES: celda compartida con la fila anterior --> 
+						<!--MARTES: celda compartida con la fila anterior --> 
+						<!--MIERCOLES: celda compartida con la fila anterior --> 
+						<td rowspan="2"> IAWEB<br/>NOMBRE DEL PROFESOR</td><!-- JUEVES -->
+						<td rowspan="2"> LENGMAR<br/>NOMBRE DEL PROFESOR</td> <!-- VIERNES-->
+					</tr>
+					<tr>
+						<td>13:05<br />14:00</td>
+						<!--LUNES: celda compartida con la fila anterior --> 
+						<!--MARTES: celda compartida con la fila anterior --> 
+						<!--MIERCOLES: celda compartida con la fila anterior --> 
+						<!--JUEVES: celda compartida con la fila anterior --> 
+						<!--VIERNES: celda compartida con la fila anterior --> 
+					</tr>
+
+				</tbody>
+				
+			</table>
+			
+
+			<footer>
+				<p>
+					&copy; Copyright  by DMG
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
