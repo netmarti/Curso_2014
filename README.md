@@ -1,4 +1,6 @@
-HTML
+<!--HTML
 ====
 
-Principiantes
+Primeros pasos con HTML y CSS 
+
+Ejercicios y soluciones para ir aprendiendo -->
