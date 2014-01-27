@@ -23,11 +23,23 @@ span .narrador{font-style: italic;
 div{color: green;
 }
 /*Muestra alineados a la derecha los textos cachi2 */
+.cachi2{text-aling: right;
+}
 
 /*Añadir un espacio de 3px dentro de los SPAN */
-/*Cambiar el color de fondo de los DIV de la clase "dialogo" */
+span{padding: 3px;
+}
+
+/*Cambiar el color de fondo de los DIV de la clase "dialeg" */
+div.dialeg{background: lime;
+}
+
 /* Busca información sobre text-shadow y aplica el estilo a los SPAN situados dentro de un H1*/
+span h1{text-shadow: 2px 3px 2px;
+}
 /*Busca información sobre text-decoration para subrayar los textos de la clase cachi2*/
+.cachi2{text-decoration: under line 
+}
 /*Cambiar el color de los textos de la clase cachi1*/
 /*Muestra una sombra en los textos de cachi3 */
 /*Elimina los subrayados de los links*/
