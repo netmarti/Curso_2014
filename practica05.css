@@ -2,13 +2,28 @@ h1{
 text-align: center;
 }
 /*Añadir un borde a h1*/
+
+h1{border: 7px dashed purple; padding: 10px; marging: 10px;
+}
 /*Añadir un espacio de 10px entre el borde y su contenido*/
-/*Añadir un espai de 10px entre el borde y la introducción*/
+/*Añadir un espacio de 10px entre el borde y la introducción*/
+
 /*Cambiar la medida de la letra del div con id "introducción"*/
-/*Cambiar la font dels elements de la clase "narrador"*/
+div#introduccion{font-size: 21px;
+}
+
+/*Cambiar la fuente de los elementos de la clase "narrador"*/
+
+.narrador{font-family: tahoma;
+}
 /*Mostrar en cursiva los textos de la clase "narrador" situados dentro de un SPAN*/
+span .narrador{font-style: italic;
+}
 /*Cambiar el color de los textos de todos los DIV*/
+div{color: green;
+}
 /*Muestra alineados a la derecha los textos cachi2 */
+
 /*Añadir un espacio de 3px dentro de los SPAN */
 /*Cambiar el color de fondo de los DIV de la clase "dialogo" */
 /* Busca información sobre text-shadow y aplica el estilo a los SPAN situados dentro de un H1*/
