@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>PRACTICA 06</title>
+		<meta name="description" content="">
+		<meta name="author" content="NOMBRE">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<div>
+					<img src="img/catCute.gif" /> 
+				</div>							
+				<div>
+					<h1>Pagina HTML de NOMBRE</h1>
+				  	<h2>Ejemplo de 2a cabecera</h2>
+				 </div>
+				
+			</header>
+			<nav>
+				<ul>
+					<li>
+						<a href="/practica06.html">HOME</a>
+					</li>
+					<li>
+						<a href="#">LINK</a>
+					</li>
+					<li>
+						<a href="#">LINK</a>
+					</li>
+				</ul>
+			</nav>	
+			<div>
+				<table border="1">
+					<thead>
+						<tr>
+							<td> horario </td> <td>LUNES</td>  <td>MARTES</td> <td>MIERCOLES</td> <td>JUEVES</td> <td>VIERNES</td>	
+						</tr>
+					</thead>
+					<tfoot>	<!-- Aunque el tfoot se escribe después del thead, se muestra al final-->
+						<tr>
+							<td>Total:6h</td>
+							<td > 6</td> <!-- LUNES-->
+							<td>  5</td><!-- MARTES -->
+							<td > 6</td> <!-- MIERCOLES-->
+							<td> 5</td><!-- JUEVES -->
+							<td> 6</td> <!-- VIERNES-->
+						</tr>
+											
+					</tfoot>
+					<tbody>
+						<tr>
+							<td>8:00<br />8:55</td>
+							<td rowspan="3"> LENGMAR<br/>Profesor1</td> <!-- LUNES: celda que ocupa las 3 filas siguientes -->
+							<td>  </td><!-- MARTES -->
+							<td rowspan="3"> LENGMAR<br/>Profesor1</td> <!-- MIERCOLES celda que ocupa las 3 filas siguientes -->
+							<td> </td><!-- JUEVES -->
+							<td rowspan="3"> LENGMAR<br/>Profesor1</td> <!-- VIERNES  celda que ocupa las 3 filas siguientes -->
+						</tr>
+						<tr>
+							<td>8:55<br />9:50</td>
+							<!--<td> LENGMAR<br/>Profesor1</td>  LUNES: celda compartida con la fila anterior-->
+							<td rowspan="2"> LENGMAR<br/>Profesor1</td><!-- MARTES -->
+							<!--<td> </td>  MIERCOLES : celda compartida con la fila anterior-->
+							<td rowspan="2"> LENGMAR<br/>Profesor1</td><!-- JUEVES -->
+							<!--<td> LENGMAR<br/>Profesor1</td>  VIERNES: celda compartida con la fila anterior-->
+						</tr>
+						<tr>
+							<td>10:50<br />10:45</td>
+							<!--<td> LENGMAR<br/>Profesor1 </td>  LUNES: celda compartida con la fila anterior-->
+							<!--<td> LENGMAR<br/>Profesor1 </td> MARTES :celda compartida con la fila anterior-->
+							<!--<td> </td>  MIERCOLES : celda compartida con la fila anterior-->
+							<!--<td> LENGMAR<br/>Profesor1</td> JUEVES  : celda compartida con la fila anterior-->
+							<!--<td> LENGMAR<br/>Profesor1</td>  VIERNES: celda compartida con la fila anterior-->
+						</tr>
+						<tr>
+							<td>10:50<br />11:15</td>
+							<td colspan="5"> DESCANSO </td> <!-- MIERCOLES : celda que ocupa las 5 columnas-->
+						</tr>
+						<tr>
+							<td>11:15<br />12:10</td>
+							<td rowspan="3"> LENGMAR<br/>Profesor1 </td> <!-- LUNES: celda que ocupa las 3 filas siguientes -->
+							<td rowspan="3"> LENGMAR<br/>Profesor1 </td><!-- MARTES:  celda que ocupa las 3 filas siguientes -->
+							<td rowspan="3"> IAWEB<br/>Profesor2</td> <!-- MIERCOLES: celda que ocupa las 3 filas siguientes -->
+							<td> LENGMAR<br/>Profesor1n</td><!-- JUEVES -->
+							<td> IAWEB<br/>Profesor2</td> <!-- VIERNES  celda que ocupa las 3 filas siguientes -->
+						</tr>
+						<tr>
+							<td>12:10<br />13:05</td>
+							<!--LUNES: celda compartida con la fila anterior--> 
+							<!--MARTES: celda compartida con la fila anterior--> 
+							<!--MIERCOLES: celda compartida con la fila anterior--> 
+							<td rowspan="2"> IAWEB<br/>Profesor2</td><!-- JUEVES -->
+							<td rowspan="2"> LENGMAR<br/>Profesor1</td> <!-- VIERNES-->
+						</tr>
+						<tr>
+							<td>13:05<br />14:00</td>
+							<!--LUNES: celda compartida con la fila anterior--> 
+							<!--MARTES: celda compartida con la fila anterior--> 
+							<!--MIERCOLES: celda compartida con la fila anterior--> 
+							<!--JUEVES: celda compartida con la fila anterior--> 
+							<!--VIERNES: celda compartida con la fila anterior--> 
+						</tr>
+	
+					</tbody>
+					
+				</table>
+			</div>
+			<div>
+				<form action="rebDades.php" autocomplete="on" method="get">
+	 				<fieldset>
+	 					<legend>Datos personales</legend>
+	 					<label for="nomf">Nombre</label>
+	  					<input type="text" name="nom" maxlength="25" id="nomf" placeholder="tu nombre real" title="escribe tu nombre" required><br />
+	  					<label for="mail">email</label>
+	  					<input type="email" name="mail" id="mail" placeholder="tu email" title="tu email" required><br />
+	 					home<input type="radio" name="sex" value="home" required>
+						dona<input type="radio" name="sex" value="dona" required><br />
+	 				</fieldset> 
+	 				
+	 				<input type="submit" value="darme de alta"> <input type="reset" value="resetea los valores">
+	 			</form>
+			</div>
+
+			<footer>
+				<p>
+				PIE DE PAGINA
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
