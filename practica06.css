@@ -1,0 +1,100 @@
+/*Selecciona el body
+ * per establir un tamany de 16 px als texts*/
+
+/*Selecciona el div fill de body
+ * Assigna una amplada de 800px 
+ * Estableix un marge a l'esquerre i a la dreta automatic
+ * Estabeix un marge a munt i un avall de 0px;
+ */
+
+
+/*Selecciona els div de dins el tag header
+ Indica que es mostrin del tipus: inline-block
+ * */
+
+/*Selecciona el primer div de dins el tag hedar
+ Indica que tingui una amplada de 250px*/
+
+/*Selecciona la llista.
+ * 	Utilitza la regla css "list-style" per eliminar els punts de la llista .
+ *  */
+
+/*Selecciona els links de navegació
+ * elimina tots els subratllats */
+
+
+
+/** Selecciona als elements <li> de la llista dels links de navegació.
+ *  Indica que els elements de la llista es mostrin un radera l'altre i puguin tenir una amplada i altura.
+ *  utilitza "min-width" es establir una amplada mínima de 90px
+ *  indica que el seu contingut s'ha de mostrar centrat
+ *  indica que ha de tenir un color de fons i una vora.
+ *  utilitza "border-radius" per arrodonir les vores
+ */
+
+
+
+
+/** Selecciona als elements <li> de la llista dels links de navegació quan el mouse es situï a sobre
+ * 	Modifica el seu color de fons, color de lletra i color de vora;
+ * Modifica el cursor perque es mostri una má com si estigués a sobre un link.
+ */
+
+/*Selecciona el header principal(el del body) i estableix un color de fons */
+
+
+
+/* Selecciona el text situat dins el tag header . 
+ * Estableix una ombra px a la dreta i 5px per sobre el text. 
+ * Alinea el text a la part superior.
+ * Centra el text
+ * */
+
+
+
+/*Selecciona totes les cel·les que ocupin 2 espais o més i aplica-lis una vora i 
+ un color de fons comú. L'estil de la vora ha de simular un botó.*/
+
+
+/*Selecciona el peu de la taula
+ * Estableix un tamany de text de 10px;
+ */
+
+
+/*Selecciona les cel·les del peu de la taula. 
+ * modifica l'amplada de les lletres perqué es mostrin en negreta.
+ */
+
+
+
+/*Selecciona els dies inparells de capçalera de la taula d'horaris (Dilluns, Dimecres,Divendres)
+ * Modifica el seu color de fons
+ */
+
+
+/*Selecciona els dies parells de capçalera de la taula d'horaris (Dimarts, Dijous)
+ * Modifica el seu color de fons:
+ */
+
+
+/**Selecciona la primera cel·la de cada fila imparella del cos de la taula.
+ * 	modifica el color de fons
+ */
+
+
+
+/**Selecciona la primera cel·la de cada fila parella del cos de la taula.
+ * 	modifica el color de fons
+ */
+
+/**Afegeix el text "total:" devant del text del peu de la taula;
+ */
+
+/**Selecciona el formulari
+ * 	estabeix una amplada de 150px;
+ */
+
+/*
+ * Selecciona els inputs del forumari quan es seleccionin.
+ * Mostra una ombra sota el input de color blau.
+ */
