@@ -1,53 +1,53 @@
 /*Selecciona el body
- * per establir un tamany de 16 px als texts*/
+ * para establecer un tamaño de 16 px en los textos*/
 
-/*Selecciona el div fill de body
- * Assigna una amplada de 800px 
- * Estableix un marge a l'esquerre i a la dreta automatic
- * Estabeix un marge a munt i un avall de 0px;
+/*Selecciona el div hijo de body
+ * Asigna una ancho de 800px 
+ * Establece un margen a la izquierda u a la derecha automático
+ * Estabece un margen arriba y abajo de 0px;
  */
 
 
-/*Selecciona els div de dins el tag header
- Indica que es mostrin del tipus: inline-block
+/*Selecciona los div de dentro del tag header
+ Indica que se muestren del tipos: inline-block
  * */
 
-/*Selecciona el primer div de dins el tag hedar
- Indica que tingui una amplada de 250px*/
+/*Selecciona el primer div de dentro del tag header
+ Indica que tenga un ancho de 250px*/
 
-/*Selecciona la llista.
- * 	Utilitza la regla css "list-style" per eliminar els punts de la llista .
+/*Selecciona la lista.
+ * 	Utiliza la regla css "list-style" para eliminar los puntos de la llista .
  *  */
 
-/*Selecciona els links de navegació
- * elimina tots els subratllats */
+/*Selecciona los links de navegación
+ * elimina todos los subrayados */
 
 
 
-/** Selecciona als elements <li> de la llista dels links de navegació.
- *  Indica que els elements de la llista es mostrin un radera l'altre i puguin tenir una amplada i altura.
- *  utilitza "min-width" es establir una amplada mínima de 90px
- *  indica que el seu contingut s'ha de mostrar centrat
- *  indica que ha de tenir un color de fons i una vora.
- *  utilitza "border-radius" per arrodonir les vores
+/** Selecciona los elementos <li> de la lista de los links de navegación.
+ *  Indica que los elementos de la lista se muestren uno tras otro y que puedan tener un ancho y alto.
+ *  utilizado "min-width" establecer un ancho mínimo de 90px
+ *  indica que su contenido se ha de mostrar centrado
+ *  indica que ha de tener un color de fondo y un borde.
+ *  utiliza "border-radius" para redondear los bordes
  */
 
 
 
 
-/** Selecciona als elements <li> de la llista dels links de navegació quan el mouse es situï a sobre
- * 	Modifica el seu color de fons, color de lletra i color de vora;
- * Modifica el cursor perque es mostri una má com si estigués a sobre un link.
+/** Selecciona los elementos <li> de la lista de los links de navegación quando el mouse estta sobre ellos
+ * 	Modifica el color de fondo, color de letra y color de margen;
+ * Modifica el cursor para que se muestre una mano com si estuviera sobre un link.
  */
 
-/*Selecciona el header principal(el del body) i estableix un color de fons */
+/*Selecciona el header principal(el del body) y establece un color de fondo */
 
 
 
-/* Selecciona el text situat dins el tag header . 
- * Estableix una ombra px a la dreta i 5px per sobre el text. 
- * Alinea el text a la part superior.
- * Centra el text
+/* Selecciona el texto situado dentro del tag header . 
+ * Establece una sombra px a la derecha y 5px por encima del texto. 
+ * Alinea el texto en la parte superior.
+ * Centra el texto
  * */
 
 
