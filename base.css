@@ -1,0 +1,121 @@
+h1{
+	}
+body>div{
+	width: 800px;
+}
+body>div:first-child footer{
+	background-color: #555555;
+}
+#cabeceraPrincipal{
+	width: 100%;
+	
+}
+
+#cabeceraPrincipal>div:first-child{
+	background-color: #9ACC85;
+	width: 100px;
+	height: 70px;
+	float: left;
+	margin-top: 0px;
+}
+
+
+#cabeceraPrincipal>div{
+	background-color: #CC3300;
+	float: left;
+	width: 300px;
+	height: 70px;
+}
+#cabeceraPrincipal>div:nth-child(2){
+	background-color: #00C1F2;
+	width: 400px;
+	height: 70px;
+	float: left;
+	
+}
+
+#cabeceraPrincipal nav>ul{
+	width: 300px;
+	
+	
+}
+#cabeceraPrincipal nav>ul>li{
+	
+	display: inline-block;
+	
+	}
+
+#cabeceraPrincipal nav>ul>li:hover{
+	background-color: #000;
+	
+}
+#cabeceraPrincipal nav>ul>li:hover a{
+color:#FFF;	
+
+}
+
+#cabeceraPrincipal nav>ul>li a{
+	color:#CC3300;
+	text-decoration: none;
+	border: 1px solid color: black;
+	
+	margin-top: 5px;
+}
+
+#mainWeb{
+	width: 100%;
+	min-height: 400px;
+	float: right;
+	
+}
+#mainWeb>div{
+	width: 80%;
+	background-color: #1C3785;
+	float: left;
+}
+#mainWeb>aside{
+	width: 20%;
+	min-height: 400px;
+	background-color: #FFCC99;
+	float: right;
+}
+#mainWeb article{
+	display: inline-block;
+	width: 200px;
+	height: 250px;
+}
+#mainWeb article:nth-child(2n){
+	background-color: #FFFFFF;
+}
+#mainWeb article:nth-child(2n)> header{
+}
+#mainWeb article:nth-child(2n+1)> header{
+	
+}
+
+#mainWeb article>header{
+	
+	width: 180px;
+	height:25px;
+}
+#mainWeb article>footer{
+}
+#mainWeb article>footer a{
+}
+footer{
+}
+footer ul{
+	
+	
+}
+footer li{
+}
+footer li a{
+}
+footer li:hover{
+}
+#goTop{
+	width: 100px;
+	height: 50px;
+	background-color: #FF9900;
+}
