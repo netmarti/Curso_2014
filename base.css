@@ -1,5 +1,10 @@
 h1{
+	margin-top: 2px;
+	font-size: 0.8em;
+	margin-top: 5px;
+	padding-bottom: 10;
 	}
+	
 body>div{
 	width: 800px;
 }
@@ -8,46 +13,43 @@ body>div:first-child footer{
 }
 #cabeceraPrincipal{
 	width: 100%;
-	
 }
 
 #cabeceraPrincipal>div:first-child{
 	background-color: #9ACC85;
 	width: 100px;
-	height: 70px;
+	height: 100px;
 	float: left;
 	margin-top: 0px;
 }
-
 
 #cabeceraPrincipal>div{
 	background-color: #CC3300;
 	float: left;
 	width: 300px;
-	height: 70px;
+	height: 100px;
 }
+
 #cabeceraPrincipal>div:nth-child(2){
 	background-color: #00C1F2;
 	width: 400px;
-	height: 70px;
+	height: 100px;
 	float: left;
-	
 }
 
 #cabeceraPrincipal nav>ul{
 	width: 300px;
-	
-	
 }
+
 #cabeceraPrincipal nav>ul>li{
-	
+
 	display: inline-block;
-	
+
 	}
 
 #cabeceraPrincipal nav>ul>li:hover{
 	background-color: #000;
-	
+
 }
 #cabeceraPrincipal nav>ul>li:hover a{
 color:#FFF;	
@@ -57,16 +59,19 @@ color:#FFF;
 #cabeceraPrincipal nav>ul>li a{
 	color:#CC3300;
 	text-decoration: none;
-	border: 1px solid color: black;
-	
+	border: 1px solid black;
 	margin-top: 5px;
 }
 
+span{
+	font-size: 0.6em;
+	
+}
 #mainWeb{
 	width: 100%;
 	min-height: 400px;
 	float: right;
-	
+
 }
 #mainWeb>div{
 	width: 80%;
@@ -80,9 +85,12 @@ color:#FFF;
 	float: right;
 }
 #mainWeb article{
+	padding: 5px;
+	margin-top: 10px;
 	display: inline-block;
-	width: 200px;
+	width: 220px;
 	height: 250px;
+	overflow: auto;
 }
 #mainWeb article:nth-child(2n){
 	background-color: #FFFFFF;
@@ -90,11 +98,11 @@ color:#FFF;
 #mainWeb article:nth-child(2n)> header{
 }
 #mainWeb article:nth-child(2n+1)> header{
-	
+
 }
 
 #mainWeb article>header{
-	
+
 	width: 180px;
 	height:25px;
 }
@@ -102,20 +110,41 @@ color:#FFF;
 }
 #mainWeb article>footer a{
 }
-footer{
-}
-footer ul{
+#pie_pie{
+	background-color: #555555;
+	float:left;
+	height: 100px;
+	width: 800px;
+	margin-bottom: 0px;
 	
-	
 }
-footer li{
+#pie_pie p{
+		color: white;
+		text-align: center;
+		margin-bottom: -20px;
 }
-footer li a{
+
+#pie_pie ul{
+		text-align: center; color: white;
+
+
+}
+
+#pie_pie li{
+		display: inline;
+}
+
+#pie_pie li a{
+				color: green;
+				font-weight: bold;
 }
 footer li:hover{
 }
+
 #goTop{
 	width: 100px;
 	height: 50px;
 	background-color: #FF9900;
+	margin-bottom: 0px;
 }
+
