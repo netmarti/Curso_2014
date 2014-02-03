@@ -105,6 +105,7 @@ span{
 }
 
 #mainWeb article:nth-child(2n+1)> header{
+	text-shadow: 1px 1px 1px green;
 
 }
 
@@ -112,6 +113,7 @@ span{
 
 	width: 180px;
 	height:25px;
+	text-shadow: 1px 1px 1px orange;
 }
 #mainWeb article>footer{
 }
