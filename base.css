@@ -106,6 +106,7 @@ span{
 
 #mainWeb article:nth-child(2n+1)> header{
 	text-shadow: 1px 1px 1px green;
+	margin-bottom: 10px;
 
 }
 
