@@ -84,19 +84,23 @@ span{
 	background-color: #FFCC99;
 	float: right;
 }
+
 #mainWeb article{
 	padding: 5px;
-	margin-top: 10px;
+	margin: 10px;
 	display: inline-block;
 	width: 220px;
 	height: 250px;
 	overflow: auto;
 }
+
 #mainWeb article:nth-child(2n){
 	background-color: #FFFFFF;
 }
+
 #mainWeb article:nth-child(2n)> header{
 }
+
 #mainWeb article:nth-child(2n+1)> header{
 
 }
@@ -108,16 +112,18 @@ span{
 }
 #mainWeb article>footer{
 }
+
 #mainWeb article>footer a{
 }
+
 #pie_pie{
 	background-color: #555555;
 	float:left;
 	height: 100px;
 	width: 800px;
-	margin-bottom: 0px;
-	
+	margin-bottom: 0px;	
 }
+
 #pie_pie p{
 		color: white;
 		text-align: center;
@@ -126,8 +132,6 @@ span{
 
 #pie_pie ul{
 		text-align: center; color: white;
-
-
 }
 
 #pie_pie li{
@@ -138,6 +142,7 @@ span{
 				color: green;
 				font-weight: bold;
 }
+
 footer li:hover{
 }
 
@@ -147,4 +152,3 @@ footer li:hover{
 	background-color: #FF9900;
 	margin-bottom: 0px;
 }
-
