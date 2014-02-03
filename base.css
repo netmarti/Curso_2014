@@ -92,10 +92,11 @@ span{
 	width: 220px;
 	height: 250px;
 	overflow: auto;
+	background-color: lightblue;
 }
 
 #mainWeb article:nth-child(2n){
-	background-color: #FFFFFF;
+	background-color: lightblue;
 }
 
 #mainWeb article:nth-child(2n)> header{
