@@ -47,7 +47,10 @@ display: block;
    background-color: red;
    position: relative;
    list-style-type: none;
+   border: 1px solid white;
    
+  /* CENTRA EL TEXTO *****/
+  /* text-align: center; */
 }
 
 #menuVertical>ul>li>ul{
@@ -74,11 +77,12 @@ display: block;
 
 #menuVertical li{
    position:  relative;
+   border: 1px solid white;
 }
 
 #menuVertical>ul{
    width: 80px;
-    padding: 0;
+    padding: 0px;
 }
 
 
@@ -89,3 +93,39 @@ display: block;
 #menuVertical>ul>li>ul>li:hover>ul{
 	display: block;
 }
+
+/***************************************************************************/
+/** CREAMOS 1 IDENTIFICADOR Y 3 CLASES PARA GESTIONAR              *********/
+/* 	EL COMPORTAMIENTO DEL RATON Y LOS COLORES DEL MENU DESPLEGABLE*********/
+/*************************************************************************/
+
+
+#color0:hover{
+				background-color: black;
+				padding-left: 20px;
+				padding-right: 20px;
+}
+
+.color0{
+				background-color: black;
+				padding-left: 13px;
+				padding-right: 13px;
+}
+.color1:hover{
+				background-color: green;
+				padding-left: 10px;
+				padding-right: 10px;
+}
+.color2:hover{
+				background-color: blue;
+				padding-left: 4px;
+				padding-right: 4px;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*INDICAMOS QUE LOS LINKS SE MUESTREN EN BLANCO*/
+
+*{color: white;}
