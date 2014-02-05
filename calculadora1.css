@@ -1,0 +1,45 @@
+<?php
+// OPERACIONES ARITMÉTICAS
+
+//$a=$b+6;	//suma +
+
+//$a=$b-2;	//resta -
+
+//$a=$b*4;	//multiplicación *
+
+//$resto=$a%$b;	//resto %
+
+
+
+/////////////////////////////////////////////////////
+
+
+
+echo "RESULTADO: ";
+echo "</br></br>";
+
+$a=$_POST['primeraCifra'] + $_POST['segundaCifra'];	//suma	+	//
+echo "La suma da: ".$a;
+echo "</br>";
+
+$a=$_POST['primeraCifra'] - $_POST['segundaCifra'];	//resta	-	//
+echo "La resta da: ".$a;
+echo "</br>";
+
+$a=$_POST['primeraCifra'] * $_POST['segundaCifra'];	//multiplicación *	//
+echo "La multiplicación da: ".$a;
+echo "</br>";
+
+$a=$_POST['primeraCifra'] / $_POST['segundaCifra'];	//división	/	//
+echo "La división da: ".$a;
+echo "</br>";
+
+$a=(int)($_POST['primeraCifra'] / $_POST['segundaCifra']);	//división sin decimales	/	//
+echo "La división sin decimales da: ".$a;
+echo "</br>";
+
+$a=$_POST['primeraCifra'] % $_POST['segundaCifra'];	//resto %	//
+echo "El resto es: ".$a;
+
+
+?>
