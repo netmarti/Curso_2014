@@ -25,3 +25,4 @@ print("Dame un valor");
 print ('<br /><a href="calcula1.html">Volver</a>');
 }
 }
+?>
