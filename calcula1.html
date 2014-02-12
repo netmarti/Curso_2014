@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>calculadora</title>
+    </head>
+        <body>
+        <h1> Hola, soy tu Calcula...Dora ;) </h1>
+            <fieldset style="width: 460px; background-color: moccasin;"> 
+                <legend> <h2>Vamos a empezar: elige un operador</h2></legend><br />
+            <form action="calcular1.php" method="post">
+                    <input type ="radio" name="operador" value="suma"> <b> Suma</b>
+                    <input type ="radio" name="operador" value="resta"> <b> Resta</b>
+                    <input type="radio" name="operador" value="multiplica"> <b> Multiplica</b>
+                    <input type ="radio" name="operador" value="divide"> <b> Divide</b>
+                    <input type ="radio" name="operador" value="dividSinDecimal"> <b> Divide sin decimales</b>
+                <br /><br />
+                Dame un valor:<br />
+                <input type="text" name="valor1"><br />
+                Dame otro valor:<br />
+                <input type="text" name="valor2"><br><br />
+                <input type="reset" value="BORRAR">
+                <input type="submit" value="CALCULAR">
+                </form>
+                </fieldset>
+    </body>
+</html> 
