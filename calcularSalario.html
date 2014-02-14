@@ -15,17 +15,17 @@
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		<link rel="stylesheet" href="css/practica06.css"/>
+		
 	</head>
 	<body>
-	<h1>CALCULADORA</h1>
-
-<form action="CALCULAR SALARIO.php" method="POST" >
-	Salario: <input type="text" name="pn" size="6" maxlength="50"><br><br>
-IRPF: <input type="text" name="sn" value="" size="3" maxlength="2">
+	<h1>Detalles del salario</h1>
+<fieldset style="background: moccasin; width: 240px">
+<legend>Desglose del salario</legend>
+<form action="calcularSalario.php" method="POST">
+	Salario: <input type="number" name="salario" placeholder="indica tu salario" required><br><br>
+	IRPF: <input type="number" name="irpf" placeholder="indica tu IRPF" required>
 <br><br>
 
-<!--readonly="readonly --para bloquar el imput text  -->
 
 <input type="radio" name="calculadora" value="bruto" checked> Salario Bruto
 <br>
@@ -35,12 +35,12 @@ IRPF: <input type="text" name="sn" value="" size="3" maxlength="2">
 <br>
 <br><br>
 
-<input type="submit"  value="Enviar_formulario">
+<input type="submit"  value="Enviar datos" style="background: peru; color: white"><br/>
 
-<input type="reset" name="limpiar" value="Borrar datos del formulario" />
+<input type="reset" name="limpiar" value="Borrar datos del formulario" style="background: peru; color: white" />
 
 </form>
-
+</fieldset>
 
 </body>
 </html>
