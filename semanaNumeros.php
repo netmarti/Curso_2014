@@ -15,17 +15,17 @@
 < ?php
 $dia=$_POST[‘dia’]
 switch($dia) {
-case 0: echo "Es domingo";
+case 0: echo "Es Domingo";
 break;
 case 1: echo "Es Lunes";
 break;
 case 2: echo "Es Martes";
 break;
-case 3: echo "Es Miercoles";
+case 3: echo "Es Miércoles";
 break;
 case 4: echo "Es Jueves";
 break;
-case 5: echo "Es Sabado";
+case 5: echo "Es Viernes";
 break;
 case 6: echo "Es Sabado";
 break;
