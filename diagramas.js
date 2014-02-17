@@ -124,15 +124,28 @@ function diagrama05() {
 			alert(mayor+" "+medio+" "+menor);
 			
 
+function diagrama06 (){
+	var Area, radio, Perimetro;
+	var pi=3.141592;
+	
+	
+	
+	radio=prompt("Escribe el radio del círculo"," ");
+	Area=pi*radio*radio;
+	Perimetro=2*pi*radio;
+	
+	alert("Area del círculo="+Area);
+	
+	alert("El perímetro es="+Perimetro);
+}
+
 }
 
 /*
 Dejamos preparadas las funciones que vamos a utilizar para completar la práctica 14. 
 Las iremos descomentando a medida que las vayamos completando.
 
-function diagrama06() {
 
-}
 function diagrama07() {
 
 }
