@@ -125,3 +125,43 @@ function diagrama05() {
 			
 
 }
+
+/*
+Dejamos preparadas las funciones que vamos a utilizar para completar la práctica 14. 
+Las iremos descomentando a medida que las vayamos completando.
+
+function diagrama06() {
+
+}
+function diagrama07() {
+
+}
+
+function diagrama08() {
+
+}
+function diagrama09() {
+
+}
+
+function diagrama10() {
+
+}
+function diagrama11() {
+
+}
+
+function diagrama12() {
+
+}
+function diagrama13() {
+
+}
+
+function diagrama14() {
+
+}
+function diagrama15() {
+
+}
+*/
