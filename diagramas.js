@@ -141,14 +141,47 @@ function diagrama06 (){
 
 }
 
+function diagrama07() {
+	
+	var num;
+	
+	d=window.prompt("Introduce un número de 0 a 6");
+	
+	
+switch (d)
+  {
+  case "0":
+    num="hoy es Lunes";
+    break;
+  case "1":
+    num="hoy es Martes";
+    break;
+  case "2":
+    num="hoy es Miércoles";
+    break;
+  case "3":
+    num="hoy es Jueves";
+    break;
+  case "4":
+    num="hoy es Viernes";
+    break;
+  case "5":
+    num="hoy es Sabado";
+    break;
+  case "6":
+    num="hoy es Domingo";
+    break;
+  default:
+    
+   }
+   alert("El valor introducido indica que "+num);
+}
+
 /*
 Dejamos preparadas las funciones que vamos a utilizar para completar la práctica 14. 
 Las iremos descomentando a medida que las vayamos completando.
 
 
-function diagrama07() {
-
-}
 
 function diagrama08() {
 
