@@ -1,0 +1,29 @@
+<html>
+<head>
+<script language="JAVASCRIPT">
+
+function calcula(total){
+total.resul.value = eval(total.expr.value)
+}
+</script>
+</head>
+<body>
+<hr>
+<center>
+Introduce una expresión a calcular<br>
+del estilo --> 4*3 <br>
+o del estilo --> (4*3)/(3-2)<br>
+<br>
+<hr>
+<form name="Calculadora">
+Expresion
+<br>
+<input type="text" name="expr" size="20"><br>
+Resultado<br>
+<input type="text" name="resul" size="20"><br>
+<input type="button" name="Licz" value= " Calcular " onClick="calcula(this.form)">
+</form>
+</center>
+</body>
+
+</html>
