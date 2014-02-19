@@ -10,18 +10,20 @@ total.resul.value = eval(total.expr.value)
 <body>
 <hr>
 <center>
-Introduce una expresión a calcular<br>
-del estilo --> 4*3 <br>
-o del estilo --> (4*3)/(3-2)<br>
+Vamos a calcular<br>
+coloca una sintaxis del tipo --> 4*3 <br>
+o mayor dificultad --> (4*3)/(3-2)<br>
 <br>
 <hr>
 <form name="Calculadora">
-Expresion
+A realizar
 <br>
-<input type="text" name="expr" size="20"><br>
+<input type="text" name="expr" size="20"><br><br>
+
+<input type="button" name="Licz" value= " Calcular " onClick="calcula(this.form)">
+<br><br>
 Resultado<br>
 <input type="text" name="resul" size="20"><br>
-<input type="button" name="Licz" value= " Calcular " onClick="calcula(this.form)">
 </form>
 </center>
 </body>
