@@ -1,0 +1,81 @@
+BUCLE: Conjunto de instrucciones que escribo una vez en el programa y va a repetirse determinado número de veces.
+
+BUCLE		Nº de REPETICIONES			
+FOR			Fija "Variable"
+Ej: pedir los datos de 20 empleados o
+puedo no saberlas cuando se inicia el programa, pero sí cuando va a iniciarse el bucle, porque tiene que venir de una operación, pero lo sabré cuando se inicia el bucle.
+
+
+																								CONDICION
+
+DO ... 		NO "Variable" Fija																	FINAL
+WHILE																							1 Variable
+El bucle ha de ejecutarse una vez para ver si se cumple o no la condición.
+Ej: cuando no se las veces que se va a repetir el bucle, 
+ej preguntamos ¿quieres seguir introduciendo variables?
+
+ 
+WHILE																							PRINCIPIO
+Si hemos de hacer un bucle en el que es posible que la condición se ejecute 0 veces				0 Variable
+
+
+SINTAXIS:
+
+La variable que hace de "motor" del for (en libros y tutoriales) es la i (si necesitamos más las sucesivas j, k, l...),
+N el número de repeticiones.
+
+Tenemos 3 partes: inicializar, comparar, incrementar o decrementar.
+
+inicializar: pone el "contador a cero": $i=0 (solo lo ejecuta una vez al principio)
+compara, en este caso: $i<$N (si no se cumple la condición pasa al siguiente trozo de código, en el ejemplo incrementar 1)
+incrementa en una unidad el valor de N: $i++
+
+COMO OBTENER Y TRABAJAR CON LA VARIABLE:
+Si la "VARIABLE N" la sabemos la apuntamos, 
+si no es así la calculamos, 
+si la ha de poner el usuario la preguntamos.
+
+
+FOR ($i=0;$i<$N;$i++)
+
+Ejemplo un bucle de 12 aumentos el valor de i
+
+for ($i=0;$i<12;$i++)
+
+
+
+DO{
+... aquí dentro van las instrucciones
+}WHILE (condición de ejecución, tiene que cumplirse para quedarse en el programa)
+
+Ej: por teclado vamos a pedir un número (num) y quiero que el num sea positivo (no vamos a permitir ceros ni negativos)
+vamos a utilizar un bucle, no sabemos cuantas veces va a pedir el número hasta que el usuario ponga el (num) 
+con esas propiedades; no sabemos cuántas veces va a repetirse el bucle, hemos de colocar la condición que no queremos, 
+en este caso <=0, 
+para que el bucle siga ejecutándose mientras el usuario no introduzca un valor que rompa el bucle.
+
+Si queremos elegir los números pares pondríamos en la condición de if num%2=0, en el do ... while pondremos (num%2!=0)
+es decir que cuando se equivoque y nos ponga un impar volvamos a solicitarle el número.
+
+
+Ahora vamos a solicitar que el num tenga un valor entre 1 y 10. 
+ 
+Pondremos en el while lo que no queremos que ocurra
+(entre 2 números a y b, 
+siempre que el primero 
+sea mayor que el segundo)
+                            ((num<a)||(num>b));
+                            ((num<1)||(num>10);)
+
+
+
+WHILE
+Es un bucle que incialmente vamos a utilizar poco, al ser un bucle en el que la condición puede no cumplirse nunca.
+Tienen sentido cuando trabajemos con "sitios" que existen pero que pueden estar vacios. Se utiliza frecuentemente cuando 
+accedemos a tablas, bases de datos...
+
+Ej: 
+tenemos que mostrar un listado con los alumnos matriculados en una asignatura, 
+puede ocurrir que no tenga alumnos inscritos.
+
+
