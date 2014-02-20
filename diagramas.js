@@ -2,6 +2,10 @@
 * @author Daniel
 */
 
+/**
+ * diagrama01 solicita un valor y nos indica si es superior o inferior a 30
+ */
+
 function diagrama01() {
 	num_1 = window.prompt("Dame un valor")
 	if (num_1 > 30) {
@@ -14,7 +18,9 @@ function diagrama01() {
 
 }
 
-
+/**
+ * diagrama02 solicita dos valores y nos indica cual es superior y cual es inferior
+ */
 function diagrama02() {
 	var num_1;
 	var num_2;
@@ -30,11 +36,11 @@ function diagrama02() {
 				else (num_1 > num_2);
 
 			alert (num_2 + " es inferior");
-
-
 }
 
-
+/**
+ * diagrama03 solicita dos valores por pantalla y nos indique cual es superior, cual es inferior y si son iguales nos lo indique
+ */
 function diagrama03() {
 	var num_1;
 	var num_2;
@@ -59,7 +65,9 @@ function diagrama03() {
 
 }
 
-
+/**
+ * diagrama04 solicita tres valores y nos muestra cual es el mayor
+ */
 function diagrama04() {
 	var num_1;
 	var num_2;
@@ -88,6 +96,9 @@ function diagrama04() {
 
 }
 
+/**
+ * diagrama05 solicita tres valores y nos los muestre ordenados de mayor a menor
+ */
 function diagrama05() {
 	var num_1 = window.prompt("Dame un valor");
 	var num_2 = window.prompt("Dame otro valor");
@@ -122,9 +133,12 @@ function diagrama05() {
 					}
 			medio=(parseInt(num_1)+parseInt(num_2)+parseInt(num_3))-(parseInt(mayor)+parseInt(menor));
 			alert(mayor+" "+medio+" "+menor);
-			
+}
 
-function diagrama06 (){
+/**
+ * diagrama06 un programa que nos pida el radio y nos muestre el perímetro de un círculo y el área 
+ */
+function diagrama06() {
 	var Area, radio, Perimetro;
 	var pi=3.141592;
 	
@@ -139,8 +153,9 @@ function diagrama06 (){
 	alert("El perímetro es="+Perimetro);
 }
 
-}
-
+/**
+ * diagrama07 solicita un número del 0 al 7 y devuelve el día de la semana empezando por lunes
+ */
 function diagrama07() {
 	
 	var num;
@@ -177,25 +192,82 @@ switch (d)
    alert("El valor introducido indica que "+num);
 }
 
+//* Un programa que nos pida un valor y nos de la bienvenida si el valor es múltiplo de 2 o superior a 20
+
+function diagrama08() {
+	
+	var num, mensaje = "Bienvenid@ al diagrama 08";
+	
+	num=window.prompt("Dame un valor");
+	num=window.parseInt(num);
+
+		if ( num%2==0 || num>20){
+	
+ 
+   alert("Bienvenido/al diagrama 08 ");
+		}
+}
+
+
+// * diagrama09 un programa que nos pida un nombre y un password y nos de la bienvenida si el texto es José y password "12345"
+ 
+function diagrama09() {
+
+	var nombre, password, mensaje ="Bienvenido/a al diagrama 09";
+	
+	nombre=window.prompt("Dime tu nombre");
+	password=window.prompt("Indica un password");
+	
+		if (nombre=="Jose" && password=="12345"){
+			
+	alert("Bienvenido/a al diagrama 09");
+		}
+		else{
+				alert("No te conozco, habla con el administrador de diagramas");
+		}
+}
+
+// * diagrama10 un programa que nos pida valores hasta que el usuario ponga uno superior a 50
+function diagrama10() {
+	
+	var num;
+	
+	num=window.prompt("Dame un valor");
+	num=window.parseInt(num);
+	
+	
+	while (num<50){
+		num=window.prompt("Dame un valor");
+		
+	}
+	
+
+}
+
+/*diagrama11 un programa que nos pida valores hasta que el usuario ponga uno superior a 50
+/* y nos muestre al final los intentos hasta llegar al valor superior a 50*/
+
+function diagrama11() {
+	
+	var num, intentos;
+	
+	intentos= 1;
+	num=window.prompt("Dame un valor");
+	num=window.parseInt(num);
+	
+	
+	
+	while (num<50){
+		num=window.prompt("Dame un valor");
+		intentos++;
+	}
+
+	alert("Has pasado"+intentos);
+
 /*
 Dejamos preparadas las funciones que vamos a utilizar para completar la práctica 14. 
 Las iremos descomentando a medida que las vayamos completando.
 
-
-
-function diagrama08() {
-
-}
-function diagrama09() {
-
-}
-
-function diagrama10() {
-
-}
-function diagrama11() {
-
-}
 
 function diagrama12() {
 
