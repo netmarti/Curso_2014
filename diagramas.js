@@ -262,7 +262,7 @@ function diagrama11() {
 		intentos++;
 	}
 
-	alert("Has pasado"+intentos);
+	alert("Has realizado"+intentos);
 
 /*
 Dejamos preparadas las funciones que vamos a utilizar para completar la práctica 14. 
