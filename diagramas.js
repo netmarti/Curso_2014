@@ -255,8 +255,6 @@ function diagrama11() {
 	num=window.prompt("Dame un valor");
 	num=window.parseInt(num);
 	
-	
-	
 	while (num<50){
 		num=window.prompt("Dame un valor");
 		intentos++;
@@ -264,14 +262,25 @@ function diagrama11() {
 
 	alert("Has realizado"+intentos);
 
+
+/*Programa que pida un valor y lo multiplique por 5, solo usando la función suma.*/
+
+function diagrama12() {
+	
+	var i, num, resul;
+	num=window.prompt("Dame un valor");
+	num=window.parseInt(num);
+	i=5;
+	resul=num+
+
+}
+
 /*
 Dejamos preparadas las funciones que vamos a utilizar para completar la práctica 14. 
 Las iremos descomentando a medida que las vayamos completando.
 
 
-function diagrama12() {
 
-}
 function diagrama13() {
 
 }
