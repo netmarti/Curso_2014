@@ -1,0 +1,52 @@
+<HTML>
+
+<SCRIPT LANGUAGE='JavaScript'>
+
+// Propuesta para calificaciones
+
+  var num, bien, nota, califica;
+  num=parseInt(prompt('Preguntas realizadas en total: ',''));
+
+  bien=parseInt(prompt('Respuestas acertadas: ',''));
+  nota=parseInt(10*bien/num);
+
+  switch(nota)
+  {
+
+  case 0:
+    califica='Muy Deficiente';
+break;
+case 1:
+califica='Muy Deficiente';
+break;
+case 2:
+califica='Deficiente';
+break;
+case 3:
+califica='Deficiente';
+break;
+case 4:
+califica='Insuficiente';
+break;
+case 5:
+califica='Suficiente';
+break;
+case 6:
+califica='Bien';
+break;
+case 7:
+califica='Notable';
+break;
+case 8:
+califica='Notable';
+break;
+case 9:
+califica='Excelente';
+break;
+case 10:
+califica='Matricula de Honor';
+break;
+}
+alert('Has sido calificado con '+califica);
+</SCRIPT>
+</HTML>
