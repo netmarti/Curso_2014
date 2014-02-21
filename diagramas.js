@@ -275,15 +275,35 @@ function diagrama12() {
 
 }
 
+/*diagrama13 un programa que nos pida un valor >0 y <4 
+/* y ejecute la función del diagrama correspondiente */
+
+function diagrama13() {
+			diagr=window.prompt("Indicar un diagrama de 0 a 4");
+			
+	switch (diagr)
+	{
+		case "0":
+			diagrama01();
+		break;
+		case "1":
+			diagrama02();
+		break;
+		case "2":
+			diagrama03();
+		case "3":
+			diagrama04();
+		break;
+		case "4":
+			diagrama05();
+		break;
+	}
+}
+
 /*
 Dejamos preparadas las funciones que vamos a utilizar para completar la práctica 14. 
 Las iremos descomentando a medida que las vayamos completando.
 
-
-
-function diagrama13() {
-
-}
 
 function diagrama14() {
 
