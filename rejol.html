@@ -1,0 +1,40 @@
+<html> 
+      <head> 
+            <title>Reloj con Javascript</title> 
+            <script language="JavaScript"> 
+            function elReloj(){ 
+   	        ahora = new Date() 
+   	        hora = ahora.getHours() 
+   	        min = ahora.getMinutes() 
+   	        seg = ahora.getSeconds() 
+
+   	        str_segundo = new String (seg) 
+   	        if (str_segundo.length == 1) 
+      	    seg = "0" + seg 
+
+   	        str_minuto = new String (min) 
+   	        if (str_minuto.length == 1) 
+      	    min = "0" + min 
+
+   	        str_hora = new String (hora) 
+   	        if (str_hora.length == 1) 
+      	    hora = "0" + hora 
+
+   	        relojPantalla = hora + " : " + min + " : " + seg 
+
+   	        document.relojJS.reloj.value = relojPantalla 
+   	        setTimeout("elReloj()",1000) 
+            } 
+            </script> 
+        </head> 
+
+        <body onload="elReloj()"> 
+
+            MUESTRO LA HORA EN TU PANTALLA
+
+            <form name="relojJS"> 
+            <input type="text" name="reloj" size="15" style="background-color : sienna; color : White; font-family : Arial; font-size : 30; text-align : center;" onfocus="window.document.relojJS.reloj.blur()"> 
+            </form> 
+
+      </body> 
+</html> 
