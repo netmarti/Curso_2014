@@ -17,30 +17,27 @@
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 		
 	</head>
+	
 	<body>
 	<h1>Detalles del salario</h1>
-<fieldset style="background: moccasin; width: 240px">
-<legend>Desglose del salario</legend>
-<form action="calcularSalario.php" method="POST">
+	<fieldset style="background: moccasin; width: 240px"><legend>Desglose del salario</legend>
+	<form action="calcularSalario.php" method="POST">
 	Salario: <input type="number" name="salario" placeholder="indica tu salario" required><br><br>
 	IRPF: <input type="number" name="irpf" placeholder="indica tu IRPF" required>
-<br><br>
+	<br><br>
 
 
-<input type="radio" name="calculadora" value="bruto" checked> Salario Bruto
-<br>
-<input type="radio" name="calculadora" value="irpf" > IRPF
-<br>
-<input type="radio" name="calculadora" value="neto"> Salario Neto
-<br>
-<br><br>
+	<input type="radio" name="calculadora" value="bruto" checked> Salario Bruto<br>
+	<input type="radio" name="calculadora" value="irpf" > IRPF<br>
+	<input type="radio" name="calculadora" value="neto"> Salario Neto<br>
+	<br><br>
 
-<input type="submit"  value="Enviar datos" style="background: peru; color: white"><br/>
+	<input type="submit"  value="Enviar datos" style="background: peru; color: white"><br/>
 
-<input type="reset" name="limpiar" value="Borrar datos del formulario" style="background: peru; color: white" />
+	<input type="reset" name="limpiar" value="Borrar datos del formulario" style="background: peru; color: white" />
 
-</form>
-</fieldset>
+	</form>
+	</fieldset>
 
-</body>
+	</body>
 </html>
