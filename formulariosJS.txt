@@ -1,0 +1,44 @@
+LOS FORMULARIOS EN JAVASCRIPT
+
+Sintaxis básica de un formulario:
+
+<form name="nombre_formulario" action="procesar.asp" method="POST" target="_blank">
+
+...aquí pondremos los campos de nuestro formulario.......
+
+<input type="submit" value="enviar formulario">
+<input type="reset" value="borrar">
+</form>
+
+
+Métodos de uso frecuente en los formularios :
+
+<fieldset style="border:2px solid blue">
+
+<form name="datos" action="archivoQueRecibeLosDatosDelFormulario.php" method="POST" target="_blank"> // o method="GET"
+
+Dime tu nombre: <input type="text" name="nombre"><br>
+
+<input type="submit" value="enviar formulario"><br>//nos crea el botón de enviar
+
+<input type="reset" value="borrar">//nos crea el botón de borrar los datos del formulario
+
+</form>
+</fieldset>
+
+//el nombre del formulario, en este ejemplo "datos", será el que utilicemos para nuestras funciones, arrays, etc.
+
+
+Los eventos son frecuentes en los formularios:
+
+Sintaxis básica
+ 
+<form name="datos" method="POST" action="archivoQueRecibeLosDatosDelFormulario.php" target="_blank" 
+onSubmit="alert('Se enviará el formulario')" onReset="alert('Se borrarán todos los datos insertados')">
+Dime tu nombre: <input type="text" name="nombre">
+<br>
+
+<input type="submit" value="Enviar datos">
+<input type="reset" value="Borrar datos">
+
+</form>
