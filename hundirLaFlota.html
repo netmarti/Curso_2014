@@ -1,0 +1,167 @@
+/*
+	3x21-Hundir_la_flota
+	Práctica 17 ejercicio Extra 10
+
+	“Hundir la flota” para jugar contra el ordenador. 
+	El ordenador colocará inicialmente sus barcos en su tablero sin mostrarlos por pantalla para que el usuario no conozca su
+	ubicación. 
+	Le pedirá al usuario que introduzca información sobre la ubicación de sus barcos. 
+	Ambos jugarán con el mismo número de barcos y de las mismas dimensiones. 
+	Se juega por turnos, repitiendo disparo si se acierta y perdiendo el turno si el proyectil cae al “agua”. 
+	En cada turno, mostrar información al usuario sobre la situación de su tablero, y sobre lo que conoce del ordenador (disparo/posición y aciertos/errores). 
+	La estrategia a utilizar por el ordenador para ganar, a discreción del desarrollador. 
+	No se permitido que el ordenador use información sobre la situación de los barcos del adversario.
+*/
+
+
+
+// Constantes modificables:
+	#define tamTab	10						// Mismo ancho que alto. Mínimo obligatorio=4, Mínimo aconsejable=7, Máximo obligatorio=26 (letras del abecedario)
+
+	#define	tocado	'X'						// Diferentes marcas a representar en los tableros.
+	#define hundido	'#'
+	#define agua 	'~'
+	#define fin 	'*'
+	#define vacio 	' '
+
+	#define BARPEQ  2						// Numero de barcos de cada tamaño. Maximo 9 en total.
+	#define BARMED  2
+	#define BARGRA  1
+
+	#define LONGBARPEQ 2					// La longitud de cada tamaño de barco.
+	#define LONGBARMED 3
+	#define LONGBARGRA 4
+
+
+// Librerias:
+	#include <stdio.h>
+
+	#include <stdlib.h>						// Librerías requeridas para el calculo de números aleatorios.
+	#include <time.h>
+
+	#include <string.h>
+
+											// Librería propia que contiene todas las funciones necesarias para que el jugador y la maquina coloquen:
+	
+	                    #include "3x21-guardaEImprimeBarcos.h"	// ...sus barcos en el tablero.
+	                    #include "3x21-guardaEImprimeBombas.h"	// ...sus bombas.
+
+
+
+// Función principal:
+
+main()
+{
+	//Se genera un conjunto de números aleatorios:
+	srand((unsigned int)time(NULL));
+
+
+	// Se crean dos tableros de tres dimensiones, en el primer nivel se guardan los barcos de cada jugador, y en el segundo las bombas que tocaron barco o agua del contrario:
+	char tabJug[tamTab][tamTab][2];
+	char tabMaq[tamTab][tamTab][2];
+
+
+	// Se inicializan las variables, algunas de ellas reciben el valor de las Constantes de la cabecera:
+	int  barPeq = BARPEQ, longBarPeq = LONGBARPEQ;
+	int  barMed = BARMED, longBarMed = LONGBARMED;
+	int  barGra = BARGRA, longBarGra = LONGBARGRA;
+	int  barcos = barPeq + barMed + barGra;
+	int trozosBarco = (barPeq*longBarPeq)+(barMed*longBarMed)+(barGra*longBarGra);
+	char tipoBar;
+	int i;
+
+	int leTocaA = rand()%2; // Variable con valor generado aleatoriamente cuyos valores seran: 0=jugador, 1=maquina. E indicaran de quien es el turno.
+
+
+
+	// Rellenamos los componentes de las cuatro matrices con 'vacio':
+	rellTablero( tabJug, tabMaq );
+
+
+	// Ordenador coloca su flota:
+	for( i=0; i < barcos; i++ )
+	{
+		// Elegimos los barcos de mayor a menor:
+		if( barGra != 0 )
+		{
+			tipoBar = 'g';
+			impBarco( tabJug, tabMaq, longBarGra, i, 1 ); // El último parámetro, el 1, indica que la introducción de barcos es por parte de la maquina y el tablero a usar.
+			barGra--;
+		}
+		else if( barMed != 0 )
+		{
+			tipoBar = 'm';
+			impBarco( tabJug, tabMaq, longBarMed, i, 1 );
+			barMed--;
+		}
+		else if( barPeq != 0 )
+		{
+			tipoBar = 'p';
+			impBarco( tabJug, tabMaq, longBarPeq, i, 1 );
+			barPeq--;
+		};
+	};
+
+
+	//Reset de los barcos con los valores de las Constantes, el jugador coloca su flota:
+	barPeq = BARPEQ; barMed = BARMED; barGra = BARGRA;
+
+
+	// El jugador introduce todos sus barcos:
+	for( i=0; i < barcos; i++ )
+	{
+		//Mostramos el tablero:
+		impTablero(tabJug);
+
+		//Pide el barco a colocar:
+		printf( "Tienes de %i barcos: %i pequeños, %i medianos y %i grandes.\n", barPeq+barMed+barGra, barPeq, barMed, barGra );
+		printf( "Dime que barco que quieres colocar: p / m / g\n" );
+		do
+		{
+			scanf( "%c", &tipoBar );
+		} while( tipoBar != 'p' && tipoBar != 'm' && tipoBar != 'g' );
+
+
+		// Tienes de barcos de ese tamaño, se pasan a la función que los muestra:
+		if( tipoBar == 'p' && barPeq != 0 )
+		{
+			impBarco( tabJug, tabMaq, longBarPeq, i, 0); // El último parámetro, el 0, indica que es la flota del jugador y el tablero deberá de usar.
+			barPeq--;
+		}
+		else if( tipoBar == 'm' && barMed != 0 )
+		{
+			impBarco( tabJug, tabMaq, longBarMed, i, 0);
+			barMed--;
+		}
+		else if( tipoBar == 'g' && barGra != 0 )
+		{
+			impBarco( tabJug, tabMaq, longBarGra, i, 0);
+			barGra--;
+		}
+		else
+		{
+			printf( "No te quedan de ese modelo de barco, coloca otro.\n" );
+			i--; //El tamaño de barco que no estaba disponible, para que no dejemos de introducir ninguno se resta 1 al bucle.
+		};
+	};
+
+	system("clear"); //Descomentar para ejecutar desde el terminal de ubuntu.
+
+	// Programamos la guerra!
+	// Cuando uno de los jugadores tiene hundida su flota termina el juego:
+	
+	do
+	{
+		impBomba( tabJug, tabMaq, trozosBarco, &leTocaA );
+	} while( cuenTrozHund(tabJug) != trozosBarco   &&   cuenTrozHund(tabMaq) != trozosBarco );
+
+	printf( "\n\n" );
+	impTabJudYTamBomJug( tabJug, tabMaq );
+	//impTabJudYTamBomJugTest( tabJug, tabMaq ); //Función de depuración, descomentar para testear el programa.
+
+	// Quien tenga mas trozos hundidos pierde:
+	
+	if( cuenTrozHund(tabJug) < cuenTrozHund(tabMaq) )	printf( "\n   Ganaste!\n\n" );
+	else												printf( "\n   Gano la maquina\n\n" );
+
+}; // Fin del main
