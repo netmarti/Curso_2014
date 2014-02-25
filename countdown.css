@@ -1,0 +1,40 @@
+<style type="text/css">
+<!--
+#ca {
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+	color: #CC0033;
+	font-size: .8em;
+	font-weight: bold;
+}
+a.boton {
+	display: block;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: .8em;
+	font-weight: bold;
+	color: #CC0033;
+	border: 1px solid #993300;
+	width: 150px;
+	text-align: center;
+	text-decoration: none;
+	padding: 1px;
+}
+a.boton:hover{
+	background-color: #993333;
+	display: block;
+	color: #FFFFFF;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #333333;
+	border-right-color: #FFFFFF;
+	border-bottom-color: #FFFFFF;
+	border-left-color: #333333;
+	width: 150px;
+}
+-->
+</style>
