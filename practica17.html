@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>exempleArrays</title>
+		<script type="text/javascript" src="js/practica17.js"></script>		
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<h1>Práctica 17</h1>
+			</header>
+			<form>
+				<input type = "button" value = "Ej01" onclick="ejercicioArr01();"/>
+				<input type = "button" value = "Ej02" onclick="ejercicioArr02();"/>
+			</form>
+			
+			<form name = "ej03">
+			
+				<h3>Ejercicio 3</h3>
+				
+				<input type = "text" name = "input0" />
+				<input type = "text" name = "input1" />
+				<input type = "text" name = "input2" />
+				<input type = "text" name = "input3" />
+				<input type = "text" name = "input4" />
+				<input type = "text" name = "input5" />
+				<input type = "text" name = "input6" />
+				<br />
+				
+				<input type = "button" value ="Muestra los valores" onclick = "ejercicioArr03();" />
+				<br />
+				
+				<h3>Ejercicio 4</h3>
+				<input type = "button" value = "Guarda los valores" onclick = "ejercicioArr04();" />
+			
+			</form>
+			
+			<form name = "ej04">
+				<h3> Ejercicio 5</h3>
+				<br />
+				DNI:<input type = "text" name = "dni"/>
+				Nombre:<input type = "text" name = "nombre"/>
+				Apellido:<input type = "text" name = "apellido"/>
+				Edad:<input type = "text" name = "edad"/>
+				<br />
+				<input type = "button" onclick = "guardaValoresEj05()" value = "Guarda los valores" />
+				<input type = "button" onclick = "muestraValoresEj05()" value = "Muestra los valores" />
+				<input type = "button" onclick = "muestraTodosValoresEj05()" value = "Muestra todos los valores" />
+				<input type = "reset" value = "Borrar datos">
+				<br />
+				
+				<h3> Ejercicio 6</h3>
+				<input type = "text" name = "telefono"/>
+				<input type = "button" name = "incluye tel" onclick = "addTelefon();" />
+				
+			</form>
+			<br />
+			<input type = "button" value = "Muestra valores" onclick = "muestraValoresDiv();"/>
+			<input type = "reset" value = "Borrar datos"><br>
+			
+			<div id = "resultado" style = " ">
+				
+			</div>
+			
+			
+			<footer>
+				<p>
+					&copy; Copyright  by Daniel
+				</p>
+			</footer>
+		</div>
+	</body>
+</html>
