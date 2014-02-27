@@ -1,0 +1,26 @@
+
+body {
+}
+
+#selectOperation> div { /*hemos cambiado esta linea*/
+	border: 1px solid blue; /*hemos cambiado el color en esta linea*/
+	margin: 5px;
+	min-height: 30px; /*hemos cambiado  el tamaño en esta linea*/
+	min-width: 75px; /*hemos cambiado esta linea*/
+	display: block; /*hemos cambiado esta linea*/
+	vertical-align: top;
+}
+
+/*hemos cambiado estas lineas del archivo original*/
+
+}
+#domNodes { /*hemos cambiado esta linea*/
+	border: 1px solid white;
+	background-color: #00C3ED;
+	z-index: 1;
+	left: 380px;
+	top: 0px;
+	min-width: 100px; /*hemos cambiado esta linea*/
+	min-height: 100px; /*hemos cambiado esta linea*/
+	/*position: absolute;*/
+}
