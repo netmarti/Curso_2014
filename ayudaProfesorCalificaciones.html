@@ -1,52 +1,50 @@
-<HTML>
+<html>
 
-<SCRIPT LANGUAGE='JavaScript'>
+	<script LANGUAGE='JavaScript'>
+	
+		var num, bien, nota, califica;
+		
+		num = parseInt(prompt('Preguntas realizadas en el test: ', ''));
 
-// Propuesta para calificaciones
+		bien = parseInt(prompt('Respuestas acertadas: ', ''));
+		nota = parseInt(10 * bien / num);
 
-  var num, bien, nota, califica;
-  num=parseInt(prompt('Preguntas realizadas en total: ',''));
+		switch(nota) {
 
-  bien=parseInt(prompt('Respuestas acertadas: ',''));
-  nota=parseInt(10*bien/num);
-
-  switch(nota)
-  {
-
-  case 0:
-    califica='Muy Deficiente';
-break;
-case 1:
-califica='Muy Deficiente';
-break;
-case 2:
-califica='Deficiente';
-break;
-case 3:
-califica='Deficiente';
-break;
-case 4:
-califica='Insuficiente';
-break;
-case 5:
-califica='Suficiente';
-break;
-case 6:
-califica='Bien';
-break;
-case 7:
-califica='Notable';
-break;
-case 8:
-califica='Notable';
-break;
-case 9:
-califica='Excelente';
-break;
-case 10:
-califica='Matricula de Honor';
-break;
-}
-alert('Has sido calificado con '+califica);
-</SCRIPT>
-</HTML>
+			case 0:
+				califica = 'Muy Deficiente. Repasa el temario.';
+				break;
+			case 1:
+				califica = 'Muy Deficiente. Repasa el temario.';
+				break;
+			case 2:
+				califica = 'Deficiente. Debes repasar el temario.';
+				break;
+			case 3:
+				califica = 'Deficiente. Debes repasar el temario.';
+				break;
+			case 4:
+				califica = 'Insuficiente. Un poco más de esfuerzo y lo conseguirás.';
+				break;
+			case 5:
+				califica = 'Suficiente. ¡Lo has conseguido!';
+				break;
+			case 6:
+				califica = 'Bien. Con un poco de esfuerzo serás un experto del tema.';
+				break;
+			case 7:
+				califica = 'Notable. Tu esfuerzo ha tenido su recompensa.';
+				break;
+			case 8:
+				califica = 'Notable. El esfuerzo ha dado resultado.';
+				break;
+			case 9:
+				califica = 'Excelente. Eres un experto en la materia.';
+				break;
+			case 10:
+				califica = 'Matricula de Honor. Ya estás preparado para preparar tu doctorado.';
+				break;
+		}
+		alert('El resultado de tu test ha sido: ' + califica);
+	</script>
+</html>
