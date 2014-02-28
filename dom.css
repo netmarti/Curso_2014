@@ -1,4 +1,3 @@
-
 body {
 }
 
@@ -24,3 +23,10 @@ body {
 	min-height: 100px; /*hemos cambiado esta linea*/
 	/*position: absolute;*/
 }
+
+/*vamos a crear un efecto para que la segunda vez que cliquemos el botón aumenta texto haga una transición*/
+
+#augmentaTamanys{
+	-webkit-transition: width 2s, height 5s;
+	transition: width 2s, height 5s;
+	}
