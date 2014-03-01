@@ -1,0 +1,34 @@
+ARQUITECTURA DE APLICACIONES WEB:
+
+Práctica 12.
+
+Ejercicio 1:
+INDICAR SI EL Software forma parte de la capa de 
+
+PRESENTACION: Internet Explorer, Outlook Express, SmartFTP, HeidiSQL, M. Thunderbird
+SERVICIOS: XAMPP, Apache, Exchange Server, Fielzilla Server, 
+DATOS: MySQL, PostgreSQL
+
+Ejercicio 2:
+IDENTIFICAR el MODELO, la VISTA y el CONTROLADOR (si lo tienen) de los siguientes ejemplos:
+
+a) Termómetro digital:
+- VISTA: el aparato
+- CONTROLADOR: el software que lo gestiona (chip, sensores)
+- MODELO: memoria de almacenamiento (BBDD)
+
+b) Teléfono móvil:
+
+- VISTA: pantalla, controlador, micrófono...
+- CONTROLADOR: sistema operativo, procesador
+- MODELO: memoria de interna/tarjeta
+
+c) Despertador analógico:
+- VISTA: agujas
+- CONTROLADOR: maquinaria
+- MODELO: aguja de programar la "alarma"
+
+d) Ordenador portátil:
+- VISTA: pantalla, teclado...
+- CONTROLADOR: sistema operativo
+- MODELO: HD, RAM...
