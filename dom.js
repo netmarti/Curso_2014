@@ -77,5 +77,23 @@ function ej02(){
 	
 
 
-	
+ /**10 Cuando se clicke sobre el div de  #delPrevNode crea un DIV con el texto 'Remove Preview' , de
+la clase delPrevNode y que se añada dentro del #domNodes. Además ha de indicar que al clicar encima
+se elimina el node anterior a el node clicado. * */
+   
+   function delPrevNode(){
+   	var elm = document.createElement('Div'); //creamos el elemento DIV
+   	elm.innerHTML="Remove Preview";
+   	elm.className="delPrewNode";
+   	elm.onclick=function(){
+   		
+   		var nodoAnterior = this.previousSibling;
+   		var padre= nodoAnterior.parentNode; // o var padre= this.parentNode;
+   		padre.removeChild(nodoAnterior);
+   	}
+   	
+   	var padre=document.getElementById('domNodes');
+   	padre.appendChild(elm);
+   	
+   }
 
