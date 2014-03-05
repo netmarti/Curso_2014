@@ -1,4 +1,19 @@
-//La instrucción RETURN (palabra reservada en JS)
+//La instrucción RETURN (palabra reservada en JS), retornamos valores desde las funciones además de finalizar la función.
+
+//ejemplos de RETURN
+
+<script type=”text/javascript”>
+function suma(a,b){
+			var resultado = a+b;
+			alert(resultado);
+			return resultado;
+}//cierra función
+//llamamos a la función suma pasándole dos parámetros el 2 y el 3
+var resultadoEnPantalla = suma(2,3);
+alert(resultadoEnPantalla);
+</script>
+
+// otro ejemplo de RETURN
 
 <script type=”text/javascript” />
 
