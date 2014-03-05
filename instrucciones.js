@@ -52,3 +52,19 @@
 </script>
 
 
+// TODO JUNTO EN UN EJEMPLO
+
+<script type="text/javascript">
+
+	function ejemplo (k=0;k<5;k++){
+		break;	//sale del bucle y continúa leyendo el código.
+			// el continue se salta lo que le quede del bucle pero continúa con el bucle, es decir aumenta la k, en este ejemplo.
+			//el return sale de la función.
+		alert(“Hola”)
+		
+		}//cierra la función
+		
+		alert(“adios”);
+
+</script>
+
