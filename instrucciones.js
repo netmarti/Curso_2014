@@ -4,10 +4,10 @@
 
     function multipleReturn(num){
 
-                                    var resto = num%2
+                                    var resto = (num%2);
 
                                     if(resto == 0){
-							                        return 0;
+							return 0;
                                                     }//cierra el if
                                     else
                                         {
