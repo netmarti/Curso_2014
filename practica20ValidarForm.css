@@ -1,0 +1,24 @@
+#contenidorFormulari{
+}
+#botonsFormulari{
+}
+#botonsFormulari>div{
+min-width: 100px;
+min-height: 30px;
+display:inline-block;
+border:2px solid black;
+}
+
+.error{
+	box-shadow: 3px 3px 0px red;
+}
+.error+span{
+	color:red;
+}
+.ok{
+	box-shadow:3px 3px 0px green;
+}
+.ok+span{
+	color:green;
+}
+
