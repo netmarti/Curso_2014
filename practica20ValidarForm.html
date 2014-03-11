@@ -1,90 +1,60 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
-
-		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-		Remove this if you use the .htaccess -->
-		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-		<title>practica20</title>
-		<meta name="description" content="">
-		<meta name="author" content="Daniel">
-
-		<meta name="viewport" content="width=device-width; initial-scale=1.0">
-
-		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<title>index</title>
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		<link rel= "stylesheet" href= "practica20.css" type="text/css" />
-		<script type="text/javascript" src="practica20.js"></script>
-
+		<link rel="stylesheet" href="css/formulari.css" type="text/css">
+		<script type="text/javascript" src="js/formulari.js"></script>
 	</head>
 
 	<body>
 		<div>
 			<header>
-				<h1>Práctica20 Formulario</h1>
+				<h1>Formulario</h1>
 			</header>
-			
-				<div id="contenidorFormulari">
-					<form onsubmit="return validaForm(this);" >
-						<label for="usuari">usuario:</label>
-						<br />
-						<input type="text" name="usuari" id="usuari"/>
-						<span> </span>
-						<br />
-						<label for="email">email:</label>
-						<br />
-						<input type="text" name="email" id="email" />
-						<span> </span>
-						<br />
-						<label for="password">password1:</label>
-						<br />
-						<input type="password" name="password" id="password"/>
-						<span> </span>
-						<br />
-						<label for="password2">password2:</label>
-						<br />
-						<input type="password" name="password2" id="password2"/>
-						<span> </span>
-						<br />
-						Sexo:
-						<label for="hombre">hombre:</label>
-						<input type="radio" name="sexo" id="home"/>
-						<label for="hombre">mujer:</label>
-						<input type="radio" name="sexo" id="dona"/>
-						<br />
-						Deseo recibir información sobre:
-						<label for="promocions">promociones</label>
-						<input type="checkbox" name="rebre" value="promocions" id="promocions"/>
-						<label for="novetats">novedades</label>
-						<input type="checkbox" name="rebre" value="novetats" id="novetats"/>
-						<br />
-						<input type="submit" />
-						<input type="reset" />
-						<input type="button" value="Muestra Datos"/>
-					</form>
-				</div>
+			<div id="contenidorFormulari">
+				<!--<form onsubmit="return validaForm(this);">-->
+				<form name="miForm">
+					<label for="usuari">usuario:</label>
+					<br />
+					<input type="text" name="usuari" id="usuari"/>
+					<span></span>
+					<br />
+					<label for="email">email:</label>
+					<br />
+					<input type="text" name="email" id="email" />
+					<span></span>
+					<br />
+					<label for="password">password1:</label>
+					<br />
+					<input type="password" name="password" id="password"/>
+					<span></span>
+					<br />
+					<label for="password2">password2:</label>
+					<br />
+					<input type="password" name="password2" id="password2"/>
+					<span></span>
+					<br />
+					Sexo:
+					<label for="hombre">hombre:</label>
+					<input type="radio" name="sexo" id="home"/>
+					<label for="hombre">mujer:</label>
+					<input type="radio" name="sexo" id="dona"/>
+					<br />
+					Deseo recibir información sobre:
+					<label for="promocions">promociones</label>
+					<input type="checkbox" name="rebre" value="promocions" id="promocions"/>
+					<label for="novetats">novedades</label>
+					<input type="checkbox" name="rebre" value="novetats" id="novetats"/>
+					<br />
+					<input type="submit" />
+					<input type="reset" />
+					<input type="button" value="Muestra Datos"/>
+				</form>
 			</div>
-			<nav>
-				<p>
-					<a href="/">Inicio</a>
-				</p>
-				<p>
-					<a href="/contact">Contacto</a>
-				</p>
-			</nav>
-
-			<div>
-
-			</div>
-
-			<footer>
-				<p>
-					&copy; Copyright  by Daniel
-				</p>
-			</footer>
+		</div>
 
 	</body>
 </html>
