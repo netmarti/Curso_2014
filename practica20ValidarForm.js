@@ -27,6 +27,19 @@ function validaForm(formulari){
 window.onload=function(){
 	var formulari =document.forms.miForm;
 	addEvent(formulari,"submit",validaForm);
+	
+	
+	addEvent(document.forms.miForm.usuari,"blur",function(evt){
+		validaCampOblig(evt.target);	//valida si el input usuari tiene algun valor
+		validaCampPatron(evt.target,/^[A-z]{3,15}$/,'solo de 3 a 5 caracteres.'); //valida input amb info del usuari
+	});
+	
+	addEvent(document.forms.miForm.usuari,"keydown",function(){
+		validaCampOblig(this);	//valida si el input usuari tiene algun valor
+		validaCampPatron(this,/^[A-z]{3,15}$/,'solo de 3 a 5 caracteres.'); //valida input amb info del usuari
+	});
+	
+
 };
 /**Valida que els valors dels inputs del forulari siguin correctes
  * Retorna false si hi ha algún element incorrecte 
@@ -55,6 +68,8 @@ var validaForm = function (evt){
 	validaCampPatron(usuari,/^[A-z]{3,15}$/,'solo de 3 a 5 caracteres.'); //valida input amb info del usuari
 	
 	validaCampOblig(email);	//valida si el input email tien algun valor
+	
+	
 	validaCampOblig(password);
 	validaCampOblig(password2);
 
