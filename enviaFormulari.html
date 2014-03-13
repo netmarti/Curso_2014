@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Exemple Ajax</title>
+		<meta name="author" content="Daniel">
+		<script type="text/javascript" src="js/exempleAjax.js"></script>
+	</head>
+
+	<body>
+		<div>
+			<header>
+				<h1>Ejercicio Ajax</h1>
+			</header>
+			<h3>Primera Parte:</h3>
+			<form action="validaForm.php" onsubmit="return enviaFormulari(this);">
+				<input type="text" name="nombre"/><span> </span>
+				<input type="submit" value="Check Nombre">
+			</form>
+			
+			<h3>Obtener Imagen</h3>
+			<form action="getImg.php" onsubmit="return getImatgeAjax(this)">
+				<select name="imatge">
+					<option value="abstract">Abstracta</option>
+					<option value="cat">gatos</option>
+					<option value="food">comida</option>
+					<option value="sports">deporte</option>
+				</select>
+				<input type="submit" value="Carga imagen"/>
+			</form>
+			<img id="imatgeSeleccionada"/>
+		</div>
+	</body>
+</html>
