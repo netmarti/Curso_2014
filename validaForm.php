@@ -9,7 +9,6 @@ if (strlen($nombre)>2 && strlen($nombre)<15){
 	$xml.='<info>'."\n";
 	$xml.='<valor><![CDATA['.$nombre.']]></valor>'."\n";
 	
-	
 }//cierra el if
 
 ?>
