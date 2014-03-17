@@ -31,3 +31,39 @@ window.alert("Bienvenido a mi sitio web. Gracias...")
 
 <input type=button value=Atrás onclick="history.go(-1)">
 
+
+/*Algunas funciones útiles*/
+
+function toolLinks(){
+var tools = document.createElement('ul');
+var item = document.createElement('li');
+var itemlink = createLink('#', 'close', closeWindow);
+item.appendChild(itemlink);
+tools.appendChild(item);
+var item2 = document.createElement('li');
+var itemlink2 = createLink('#', 'print', printWindow);
+item2.appendChild(itemlink2);
+tools.appendChild(item2);
+document.body.appendChild(tools);
+}
+
+function printWindow(){
+window.print();
+}
+
+function closeWindow() {
+window.close();
+}
+
+function createLink(url,text,func){
+var temp = document.createElement('a');
+temp.setAttribute('href', url);
+temp.appendChild(document.createTextNode(text));
+temp.onclick = func;
+return temp;
+}
+
+
+
+
+
