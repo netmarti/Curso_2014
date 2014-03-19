@@ -1,0 +1,167 @@
+
+AJAX(Asynchronous JavaScript and XML)
+
+¿Qué es AJAX? 
+Asynchronous JavaScript and XML, es una técnica que nos permite enviar consultas asíncronas al servidor e interpretar la respuesta con JavaScript. No es un lenguaje. Permite realizar cambios sobre las páginas sin necesidad de recargarlas, mejorando la interactividad, velocidad y usabilidad en las aplicaciones.
+Asíncrona: en el sentido de que los datos adicionales se solicitan al servidor y se cargan en segundo plano sin que interfieran con el comportamiento o la visualización de la página.
+El acceso a los datos se realiza mediante el objeto XMLHttpRequest: para intercambiar datos de forma asíncrona con el servidor web.
+
+XMLHttpRequest -> para establecer los datos de la consulta
+XMLHttp.open -> para establecer los parámetros de la petición que se realiza al servidor. Los parámetros necesarios son el método HTTP empleado y la URL destino (puede indicarse de forma absoluta o relativa)
+		   Método	
+XMLHttp.open(“GET”, urlDestino, true) -> petición asíncrona
+XMLHttp.open(“POST”, validaForm.php, false) -> petición síncrona
+
+XMLHttpRequest(); // esta función no sirve para todos los navegadores.
+
+// evento que indica que cuando cambie el estado ejecute la función
+XMLHttp.onreadystatechange
+
+// Prepara la función de respuesta
+XMLHttp.onreadystatechange = function(){
+					if (xmlHttp.readyState == 4){
+					//función a ejecutar al recibir la respuesta
+					recibeRespuesta(xmlHttp);
+					}
+				};
+
+// realiza la petición Http al servidor, 
+colocamos (null) al enviarlo por GET, si usamos POS colocamos en el paréntesis los parámetros ej(“param1=12”,…)
+
+XMLHttp.send(null)
+
+// obtenemos la respuesta en formato XML, que se puede procesar como un objeto del DOM.
+XMLHttp.responseXML
+VALIDAR FORMULARIOS
+
+Podemos validar un formulario 
+cuando el usuario clique sobre el botón de enviar: usaremos onsubmit (debemos poner la palabra return antes del nombre de la función y entre paréntesis el (this) después del nombre de la función. El (this) hace referencia al elemento desde el que se ha llamado a la función.
+<form action=“codigo.php” name=“formulari” onsubmit =“return validaForm(this);”>
+cuando el usuario cambie de input, podemos controlar que el usuario ha dejado el input actual, de modo que tendremos que colocarlo en cada control que necesitemos hacer: usaremos onblur.
+Nombre <input type=“text” name=“name” onblur=“validaNombre(this);”>
+cada vez que el usuario escribe los valores en el input, ej: onkeydown (presiona tecla)
+Email <input type=“text” name=“email” onkeydown=“validaEmail(this);”
+
+VALIDAR UN FORMULARIO CON SUBMIT y enviar los datos solo si todo es correcto.
+Para validar un formulario antes de enviarlo, hemos de llamar a la función que tengamos programada para que valide los campos del formulario dentro del evento onsubmit, para ello hemos de usar la palabra clave return delante del nombre de la función. Si la función devuelve FALSE no se envía el formulario.
+function validaForm(){
+		var texto= formulari[“name”].value;
+		if(texto == “cristian”){
+		return true; // se enviará el formulario si el nombre es cristian
+		}
+		return false; // el formulario no se envía
+		}
+
+
+Código básico necesario para incorporar la validación a un formulario:
+<form action="" method="" id="" name="" onsubmit="return validacion(this)">
+  ...
+</form>
+
+
+Esquema de la función validacion() :
+function validacion() {
+  if (condicion que debe cumplir el primer campo del formulario) {
+    // Si no se cumple la condición...
+    alert('[ERROR] El campo debe tener un valor de...');
+    return false;
+  }
+  else if (condicion que debe cumplir el segundo campo del formulario) {
+    // Si no se cumple la condición...
+    alert('[ERROR] El campo debe tener un valor de...');
+    return false;
+  }
+  ...
+  else if (condicion que debe cumplir el último campo del formulario) {
+    // Si no se cumple la condición...
+    alert('[ERROR] El campo debe tener un valor de...');
+    return false;
+  }
+ 
+  // Si el script ha llegado a este punto, todas las condiciones
+  // se han cumplido, por lo que se devuelve el valor true
+  return true;
+}
+
+EVENTOS en JavaScript
+
+Concepto de evento:
+
+cuando en el navegador se produce algún tipo de acción sobre el código HTML diremos que se ha producido un evento (event).
+hay diferentes tipos según quién y cómo se han producido. Ej: los eventos de ratón, teclado, de formularios, pero también podemos distinguir si se ha clickado una vez o dos… onload, cuando se carga la página.
+podremos indicar una acción a realizar cuando se produzca cierto evento sobre cierto elemento de la web. Ej: onclick=“ejecutaFuncion()”; //onclick es un atributo que llama a ejecutaFuncion(); cuando el usuario hace click sobre el elemento al que pertenece.
+cada vez que se crea un event se crea un Objeto con la información sobre dicho event.
+
+Indicar eventos en JavaScript(asignar una función en un event) 2 formas:
+
+establecer el event en el HTML, indicando el nombre del evento como un atributo del elemento. El valor del atributo será el código JS a ejecutar cuando se produzca el event.
+	
+	Ejemplos: 
+<div id=“divAzul” onclick=“ejecutaEsto();”></div>
+<body onload=“ejecutaEsto()”>
+
+establecer un evento usando el DOM, en este caso indicamos el valor del atributo mediante JS. Veamos un ejemplo en el que indicamos con JS que cuando se clicke sobre #divAzul se ejecute la función ejecutaEsto();
+
+	Ejemplo:
+var div=document.getElementById(‘divAzul’);
+				div.onclick= function(){
+						ejecutaEsto();
+						};
+
+Añadir eventos en JavaScript:
+					La función nativa es addEventListener()
+
+Como esta función NO sirve en todos navegadores USAREMOS addEvent()
+
+	function addEvent(obj, evType, fn){
+		if (obj.addEventListener){
+						obj.addEventListener(evType, fn, false);
+						return true;
+		}else if (obj.attachEvent){
+				var r = obj.attachEvent(“on”+evType, fn);
+				return r;
+		}								
+	}
+
+*obj (recibe el objeto que representa el elemento al que queremos añadir  el evento)
+*evType (recibe una string con el nombre del even a capturar sin el on, ej “click”)
+*fn(recibe la función que se quiere ejecutar)
+
+Ejemplo de uso: vamos a indicar con Js que cuando se clicle sobre #divAzul se ejecute la función ejecutaEsto(); y que también se ejecute la función ejecutaEstoTambien() a continuación. Se realizarán los dos eventos, uno tras otro.
+
+		var div = document.getElementById(‘divAzul’);
+
+		addEvent(div, “click”, function(){ejecutaEsto();});
+		addEvent(div, “click”, function(){ejecutaEstoTambien();});
+
+
+Eliminar eventos en JavaScript:
+					La función nativa es removeEventListener()
+
+Como esta función NO sirve en todos navegadores USAREMOS removeEvent()
+
+Ejemplo de uso: vamos a eliminar la función ejecutaEsto(); la segunda vez que clikemos sobre divAzul (ejemplo anterior), volvemos a utilizar el mismo código pero añadimos una linea al final donde le indicamos que el evento ha de ser eliminado.
+
+		var div = document.getElementById(‘divAzul’);
+
+		addEvent(div, “click”, function(){ejecutaEsto();});
+		addEvent(div, “click”, function(){ejecutaEstoTambien();});
+
+		removeEvent(div, “clik”, ejecutaEsto(););
+
+
+jQuery
+
+CSS: nos devuelve solo un valor, el del primero que se encuentre, de los css relacionados.
+La función .css nos permite alterar el style del elemento seleccionado.
+
+Ej:
+Si solo indicamos un parámetro, la función .css devuelve el valor de la propiedad CSS indicada.
+
+$(‘div’).css(‘background-color’)// retorna el color de fondo actual del primer <div>
+
+Si indicamos dos parámetros, establece la propiedad indicada con el valor del segundo parámetro, en este caso el color.
+$(‘div’).css(‘background-color’,’#FF55FF’)//asigna el color FF55FF a todos los <div>
+
+Si en el segundo parámetro indicamos un operador, se aplica al valor anterior, en este caso al padding.
+$(‘div’).css(‘padding’.’+=20’)//aumenta en 20 el padding de todos los <div>
