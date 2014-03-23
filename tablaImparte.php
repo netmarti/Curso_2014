@@ -1,0 +1,1 @@
+$sql = "CREATE TABLE `stucom`.`imparte` (`idimp` INT(2) NOT NULL AUTO_INCREMENT PRIMARY KEY COMMENT \'id autoincremental\', `dnip` INT(9) NOT NULL COMMENT \'dni profesor\', `dnia` INT(9) NOT NULL COMMENT \'dni alumno\') ENGINE = MyISAM CHARACTER SET utf8 COLLATE utf8_spanish_ci COMMENT = \'tabla imparte de la bbdd stucom\';";
