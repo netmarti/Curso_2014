@@ -1,0 +1,139 @@
+h1{padding:0px;margin:0px;}
+body>div{
+	width: 800px;
+	margin:0 auto;
+}
+body>div:first-child footer{
+	background-color: #555555;
+	color:white;
+	text-align: center;
+	padding:5px;
+}
+#cabeceraPrincipal{
+	display: table;
+	width: 100%;
+}
+#cabeceraPrincipal>div:first-child{
+	background-color: #9ACC85;
+	width: 100px;
+	height: 70px;
+}
+
+#cabeceraPrincipal>div{
+	display: table-cell;
+	background-color: #CC3300;
+}
+#cabeceraPrincipal>div:nth-child(2){
+	background-color: #00C1F2;
+	width: 400px;
+	height: 70px;
+}
+
+#cabeceraPrincipal nav>ul{
+	padding:0px;
+	display: table;
+	width: 300px;
+	border-collapse: separate;
+  border-spacing: 10px;
+}
+#cabeceraPrincipal nav>ul>li{
+	display:table-cell;
+	border-radius: 3px 3px 0px 0px;
+	border:1px solid black;
+	text-align: center;
+}
+#cabeceraPrincipal nav>ul>li:hover{
+	background-color: #000;
+}
+#cabeceraPrincipal nav>ul>li:hover a{
+color:#FFF;	
+}
+#cabeceraPrincipal nav>ul>li a{
+	color:#CC3300;
+	font-size: 1.5em;
+	text-decoration: none;
+}
+
+#mainWeb{
+	display: table;
+	width: 100%;
+	min-height: 400px;
+}
+#mainWeb>div{
+	display: table-cell;
+	width: 80%;
+	background-color: #1C3785;
+}
+#mainWeb>aside{
+	display: table-cell;
+	background-color: #FFCC99;
+}
+#mainWeb article{
+	padding:5px;
+	display: inline-block;
+	width: 200px;
+	height: 250px;
+	overflow: auto;
+	font-size: 0.7em;
+	margin:10px;
+	background-color: #EEEEEE;
+	box-shadow: 8px 5px 0px #3366FF;
+}
+#mainWeb article:nth-child(2n){
+	background-color: #FFFFFF;
+	box-shadow: 8px 5px 0px #FF6633;
+}
+#mainWeb article:nth-child(2n)> header{
+	text-shadow:3px 1px 0px #00FF00;
+}
+#mainWeb article:nth-child(2n+1)> header{
+	text-shadow:4px 2px 5px #FF9900;
+	
+}
+
+#mainWeb article>header{
+	
+	display: block;
+	width: 180px;
+	height:25px;
+	margin-bottom:3px;
+	overflow: hidden;
+}
+#mainWeb article>footer{
+	font-style:italic;
+}
+#mainWeb article>footer a{
+	color:#0080FF;
+}
+footer{
+	text-align: center;
+}
+footer ul{
+	display: inline-table;
+	
+	
+}
+footer li{
+	display: table-cell;
+	border-collapse: separate;
+  border-spacing: 10px;
+}
+footer li a{
+	color:#00FF00;
+}
+footer li:hover{
+	background-color: #00C1F2;
+}
+#goTop{
+	vertical-align:middle;
+	text-align:center;
+	color:white;
+	text-decoration:none;
+	position: fixed;
+	bottom: 0px;
+	right:10px;
+	width: 100px;
+	height: 50px;
+	background-color: #FF9900;
+	display: inline-block;
+}
