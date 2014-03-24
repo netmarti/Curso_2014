@@ -1,0 +1,140 @@
+MEDIA QUERIES
+
+¿Qúe es una media query?
+Una consulta sobre el medio en el que se está visualizando el código HTML.
+Devuelve TRUE si se cumplen las características del código y ejecuta las instrucciones de la media. Si devuelve FALSE no se ejecuta la media.
+
+-SINTAXIS
+	-max-width
+	-min-width
+
+Hacer una media query y utilizar el CSS 
+
+CÓDIGO ACCESIBLE (?)
+Title
+Alt
+Formulario con label
+
+¿De cuantas maneras se puede vincular a una web?
+
+- con @media
+- con el link
+
+¿Cuál es la media del dedo índice(recomendable para redimensionar los botones en las pantallas táctiles)? 45px a 57px
+
+En dispositivos móviles evitar el desplazamiento lateral de la web.
+
+RESPONSIVE
+
+¿Qué es un diseño web responsive?
+Diseño que se modifica según el dispositivo en que se visualiza, es decir se adapta al medio.
+
+Si queremos hacer un diseño web resoponsive utilizaremos las medidas de las letras en EM y el ancho de los bloques en %
+
+¿Qué características debe tener un elemento para resituarse en la web?
+
+Con: float, display:inline, display:inblock
+los elementos se colocan debajo si no caben.
+USABILIDAD:
+Facilidad con la que el usuario interactúa con la web.
+
+¿Qué tiene que tener?
+Rapidez a la hora de cargarse y sencillez para comprender su uso, recordarla cuando se vuelve a ella.
+
+En los textos cortos usaremos fuentes SANS SERIF (sin decoración): 
+En los textos largos usaremos fuentes SERIF (con decoración) porque facilitan el seguimiento de la lectura.
+
+Simplicidad: 
+- si todo es importante, nada es importante
+- mostrar rápidamente lo que ofrece nuestra web
+- hemos de evitar bombardear al usuario de opciones e información que no necesite: evitar preguntas redundantes, reducir el número de categorías y niveles de navegación, lo ideal es que se muestre según el usuario lo necesite.
+- minimizar la escritura de datos por parte del usuario: mostrar valores preestablecidos, detectar valores (geolocalización)
+
+Colores y estética homogénea:
+- utilizar colores cálidos (rojos, naranjas, etc…) para marcar acciones. Y modificar el puntero para indicar acción.
+- diferenciar los colores de enlaces del resto de los textos
+- los colores han de ir en concordancia con el servicio que se quiere ofrecer
+- utilizar el logo para acceder a la página principal
+
+Facilidad de aprendizaje y uso:
+El usuario ha de ser capaz de:
+- aprender a moverse y utilizar la web en el menor tiempo posible
+- realizar las tareas en el menor tiempo posible
+- recordar como funciona la mayor parte de la web
+
+Tolerancia a los errores:
+- la web ha de tener una alta tolerancia a los errores.
+- si el usuario se equivoca o se produce un error en el sistema, se han de evitar al máximo los mensajes de errores redirigiendo al usuario u ofreciéndole alternativas.
+
+Fuentes:
+- usaremos medidas em
+- no usaremos más de 2 tipos de fuentes en un mismo sitio web
+- evitaremos el uso del subrayado (se puede confundir con los enlaces)
+- usaremos puntualmente las mayúsculas, negritas y cursiva
+- para textos cortos usaremos fuentes sin decoración (sans serif): arial, arial narrow, arial rounded, MT Bold, century, gothic, Chicago, helvetia, Geneva, Impact, Monaco, MS Sans Serif, Tahoma, Trebuchet MS, Verdana…
+- en textos largos usaremos fuentes con decoración (serif) que facilita el seguimiento de la lectura. Book Antigua, Book Old Style, Courier, Courrier New, Century Schoolbook, Garamond, Georgia, MS Serif, New York, Times, Times New Roman, Palatino.   
+
+
+
+ACCESIBILIDAD:
+Tipos de limitaciones:
+Visual. Auditiva. Motriu. Cognitiva(dificultad en la memoria, atención o habilidades lógicas)
+
+NIVELES DE ACCESIBILIDAD:
+
+A (Centrada en las características de la estructura sean accesibles):
+-imágenes con texto alternativo: atributo ALT
+-contenido multimedia con el atributo TITLE donde le ponemos una descripción alternativa
+-contenido HTML con orden lógico de lectura independientemente del CSS. 
+
+Ejemplo
+
+<h1>Título</h1>
+	<h2>Subtítulo</h2>
+		<p>Párrafo del contenido</p>
+<div>
+<table><caption>Títulos y Autores</caption>
+		<thead>
+<tr><th></th><th>Novela fantástica</th></tr>
+</thead>
+<tfoot><tr><td>Total títulos</td>td>2</td></tr></tfoot>
+		<tbody>
+			<tr><td>Autor</td><td>J.J.Tolkien</td></tr>
+</tbody>
+</table></div>
+<div>
+<form action= ”miFormulario.php” name= ”nombreDelFormulario”>
+<label for= ”nombre”>
+<input type= ”text” name= ”nombre” value= ”nombre” id= ”nombre”/>Nombre:</label>
+</form></div>
+ 
+
+
+
+- colores del contenido fácilmente legible y que se distinga del fondo de la web.
+- las funcionalidades de la web han de ser accesibles desde el teclado(atributo tabindex)
+- hemos de poder saltar los bloques de contenido (a href=”#”)
+
+AA(Centrada en el diseño accesible de los elementos, contraste, subtítulos...)
+- debe cumplir las pautas de nivel A
+- debemos poder aumentar un 200% la letra sin perder funcionalidad en el sitio
+- H1, H2… han de ser descriptivos
+- mínimo 2 maneras de navegar por la web
+- el envío de información confidencial (formularios), debe disponer de un sistema de   corrección y aviso de error que permita corregir los datos fácilmente.
+- alto contraste entre el fondo y el texto (como mínimo 4, 5:1)
+- subtítulos para el contenido multimedia con audio (tag track)
+
+AAA(Centrada en los elementos multimedia)
+Es importante que cuando expira la sesión el usuario pueda reiniciarla sin haber perdido información.
+- cumplir las pautas de nivel AA
+- sistema para poder cambiar los colores y medidas del texto y las fuentes y limitar las líneas a 80 caracteres sin que sea necesario utilizar  el scroll horizontal para ver todo el contenido de la web.
+- siempre se muestra al usuario información sobre su situación dentro de la web
+- texto descriptivo sobre el destino de cada enlace
+- cada sección ha de tener una cabecera descriptiva
+- no puede contener nada que muestre más de 3 destellos
+- se indica un mecanismo para asegurar la correcta pronunciación de las palabras
+- cuando expira la sesión el usuario pueda reiniciarla sin haber perdido información.
+- alto contraste entre el fondo y el texto, mínimo 7, 1:1
+- contenido multimedia signado
+- descripción completa para el contenido multimedia con viedo
+- contenidos multimedia solo con locución principal (sin sonidos de fondo)
