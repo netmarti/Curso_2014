@@ -1,15 +1,40 @@
 MEDIA QUERIES
-
 ¿Qúe es una media query?
 Una consulta sobre el medio en el que se está visualizando el código HTML.
-Devuelve TRUE si se cumplen las características del código y ejecuta las instrucciones de la media. Si devuelve FALSE no se ejecuta la media.
+Devuelve TRUE si se cumplen las características del código y ejecuta las instrucciones de la media. Si devuelve FALSE no se ejecuta la media. Estas reglas pueden estar definidas en el mismo CSS o en otro archivo.
 
--SINTAXIS
-	-max-width
-	-min-width
+SINTAXIS: 
+@media tipo_dispositivo and (caracteristica) and (caracteristica), 
+       tipo_dispositivo and (caracteristica) {...} 
 
-Hacer una media query y utilizar el CSS 
 
+Ejemplo de inserción en el mismo CSS:
+- Indicamos una nueva regla sobre el “media” (Media Query) con la palabra clave @media.
+- Indicamos las características que ha de cumplir la “media” y después entre {llaves} las reglas CSS que se aplicarán en caso de que dichas características se cumplan.
+
+@media screen and (max-width: 800px) and (min-width: 600px), braille and (min-width: 900px)
+       {body 
+           {font-family:sans-serif}
+       };
+
+@media print and (min-width: 200px)
+       {body 
+           {font-family:tahoma}
+       };
+
+En un CSS externo:
+- indicamos una nueva regla dentro del atributo “media” del link que importa el archivo CSS
+- como valor del atributo media escribiremos las características que ha de cumplir la “media” para importar el archivo.
+
+<link rel=”stylesheet” type=”text/css” media=”screen and (max-width: 800px)” href=”archivoCSS.css”>
+ 
+ESTRATEGIAS:
+- mostrar siempre primero lo que al usuario le interesa
+- si la pantalla es muy pequeña ocultar o mostrar al final las imágenes o información adicional
+- si la pantalla es muy grande utilizar imágenes de fondo de gran calidad
+- resituar/ocultar elementos de la pantalla
+- en pantallas pequeñas cambiar el menú de navegación
+- en pantalla táctil redimensionar los botones de 45px a 57px (ancho medio del dedo índice)
 CÓDIGO ACCESIBLE (?)
 Title
 Alt
