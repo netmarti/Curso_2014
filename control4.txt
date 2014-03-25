@@ -99,7 +99,65 @@ Fuentes:
 - para textos cortos usaremos fuentes sin decoración (sans serif): arial, arial narrow, arial rounded, MT Bold, century, gothic, Chicago, helvetia, Geneva, Impact, Monaco, MS Sans Serif, Tahoma, Trebuchet MS, Verdana…
 - en textos largos usaremos fuentes con decoración (serif) que facilita el seguimiento de la lectura. Book Antigua, Book Old Style, Courier, Courrier New, Century Schoolbook, Garamond, Georgia, MS Serif, New York, Times, Times New Roman, Palatino.   
 
+RESPONSIVE
 
+¿Qué es un diseño web responsive?
+Diseño que se modifica según el dispositivo en que se visualiza, es decir se adapta al medio.
+Hoy en día son visualizadas desde una gran variedad de dispositivos:
+- Ordenadores de sobremesa	- Netbooks	- Smartphones	- SmartWatches
+- Ordenadores portátiles		- Google glases	- Tablets	- …
+
+Cada dispositivo tiene unas características de visualización e interacción diferentes. Entonces ¿hacia qué dispositivo hemos de diseñar?
+
+MULTIPLES DISPOSITIVOS = WEB ADAPTATIVA (diseño responsive)
+
+Web Adaptativa: es la que redimensiona y resitua los elementos que la forman para adaptarse a las características del elemento desde el que se visualiza en ese momento.
+
+ADAPTAR UNA WEB AL DISPOSITIVO EN EL QUE SE VISUALIZA:
+
+- De forma natural:
+POSITION: relative (respecto a sus hermanos, si el elemento aumenta de tamaño el elemento se desplaza)
+FLOAT:
+Si el elemento que los contiene se hace más pequeño los elementos float se ponen debajo.
+DISPLAY:inline (los elementos se colocan uno al lado del otro)
+DISPLAY: Table / display:table-cell (ha de ocupar todo el espacio)
+Medidas de los bloques en %
+Medida de las letras en EM
+min-width/min-heigth
+Max-width/Max-heigth 
+
+- De forma específica (para adaptarlas según el dispositivo desde donde se ve)
+Las “media queries” son expresiones CSS que nos permiten definir un conjunto de reglas CSS que sólo se aplicará en bajo determinadas caracterísitcas.
+Con Javascript podemos modificar el contenido CSS de los elementos según el dispositivo que está visualizando la web.
+
+¿Qué características debe tener un elemento para resituarse en la web?
+
+Con: float, display:inline, display:inblock
+los elementos se colocan debajo si no caben.
+
+RE-ESTRUCTURACIÓN:
+Propiedades que reestructuran la web según medidas de la ventana.
+
+-Relative: nos indica que la posición de un elemento está en relación con las medidas de sus hermanos. De modo que si uno de los elementos aumenta su tamaño, el resto de hermanos se moverán para hacerle sitio.
+
+-Float: con un comportamiento similar al Inline, los elementos flotan uno al lado de otro sin superponerse unos a otros. Si se superponen con el resto de hermanos (que no floten) para evitarlo usaremos “clear”. Si un elemento no tienen espacio se sitúa debajo. No se tienen en cuenta al calcular las medidas del padre que los contiene.
+
+-Display Inline: comportamiento parecido al float. Si que se tienen en cuenta al calcular las medidas del padre que los contiene. Pueden quedar mal alineados verticalmente(usaremos el valor del atributo vertical-align).
+Si un elemento no tiene espacio se sitúa debajo.
+En el padre podemos usar “text-align” para alinear los elementos a la derecha, izquierda, centro o justificados.
+
+
+ADAPTABLES NATURALES:
+
+REDIMENSION: Propiedades del CSS que redimensionan la web según la medida de la ventana.
+- medidas de bloques en %: los % indican cuanto espacio han de ocupar respecto a su padre. De modo que una imagen situada dentro de un <div> con medidas en porcentajes aumentará siempre que el <div> padre aumente. Si redimensionamos la ventana y tenemos el body al l100% este se redimensionará.
+- min-width/min-height: adicionalmente al width/height podemos indicar la medida máxima de un elemento para asegurarnos de su correcta visualización.
+
+- Max-width/Max-heigth : adicionalmente al width/height podemos indicar la medida máxima de un elemento.
+
+- medidas de letras en EM: usar medidas de fuentes en EM nos asegura que en diferentes dispositivos la letra no se verá ni muy pequeña ni muy grande. EM es una medida en función de la altura de la letra que ha de indicar el fabricante para cada dispositivo.
+
+- Display:Table / display:table-cell: las tablas tienen la característica de que las celdas que la forman han de ocuparla toda. Una tabla que se re-dimensiona primero redimensionará una celda sin una medida específica.
 
 ACCESIBILIDAD:
 Tipos de limitaciones:
