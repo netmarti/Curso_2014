@@ -1,0 +1,54 @@
+Con JAVA EE7 el enfoque está centrado en las comunicaciones por eso aparecen nuevas librerías para JSON y WebSocket, como pueden ver en esta imagen. Las verdes son las nuevas.
+
+Aquí les dejo algunas de las mejoras que se introducen.
+
+El API para servicios web RESTful:
+
+
+En el caso de API de JMS ahora en la versión 2.0 se simplifica bastante pasando de 18 líneas a 1 línea:
+
+
+
+El procesamiento de JSON es otra de las cosas mejoradas:
+
+
+Igualmente se provee un API para WebSocket 1.0:
+
+
+Se mejora la validación de los Bean:
+
+
+
+TIPOS DE APLICACIONES QUE PODEMOS DESARROLLAR:
+http://www.fdi.ucm.es/profesor/jpavon/web/45-ejb.pdf
+
+ASP.NET:
+Plataforma comercial de Microsoft para desarrollo de app.
+
+http://www.genbetadev.com/desarrollo-web/asp-net-mvc-5-iniciando-sesion-con-proveedores-externos-google-twitter-facebook
+
+tipo de aplicaciones que se desarrollan: app grandes, empresariales (ej: gestor de tráfico de trenes con sus notificaciones, horarios, etc...)
+
+
+REFERENCIAS:
+http://softpei.blogspot.com.es/2013/04/evolucion-de-java-ee-traves-de-sus.html
+
+JDBC:
+http://softpei.blogspot.com.es/2013/04/introduccion-spring-jdbc-como-solucion_29.html
+
+CRITERIOS PARA ELEGIR UNA PLATAFORMA:
+
+1- El tamaño: desarrollo pequeño usarmos AMP
+2- Uso de herramientas comerciales evaluando el costo del proyecto
+3- Solo programar en PHP en equipo Java u otro lenguaje
+4- Plataforma que pueda conectarse con el tipo de SGBBDD que voy a utilizar
+5- Finalidad del uso de la app (licencias opensource normalmente no puedes obtener beneficio, pero hay diferentes categorías)
+
+TÉCNICA DEL DESARROLLO DE APP WEB:
+
+1- Implementar el sistema:
+    entorno de desarrollo, donde se va a desarrollar la app hasta obtener una primera versión estable (versión mínimamente viable)
+
+    entorno de pre-producción: donde realizamos las pruebas finales antes de ponerla en producción.
+
+    entorno de producción: aplicación disponible para el usuario final.
