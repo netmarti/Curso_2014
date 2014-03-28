@@ -1,0 +1,21 @@
+LENGUAJES COMPILADOS (CGI):
+Rapidez a la hora de ejecutar el código
+Multiplataforma
+Mayor control del dispositivo
+
+Desfasado
+Resultados escritos directamente sobre el CGI, el código se mezcla con el HTML
+Cada programa necesita su propio espacio de memoria (ej: 3 usuarios en el mismo programa triple uso memoria)
+
+COMPILADOS E INTERPRETADOS (Servlet)
+Si otro usuario pide el servlet el servidor les responde rápidamente. Uso de threads (hilos). Multiplataforma
+
+Desventajas: sistema poco especializado o usado poco, consume mucha memoria del sistema porque mantiene abierta la máquina virtual de Java
+
+INTERPRETADOS (PHP, JSP):
+Portabilidad, pueden ser usados en cualquier SO
+Compatibilidad: al ser interpretado por el SO es la máquina virtual o framework el que se encarga de que las instrucciones sean ejecutadas por el software y el hardware.
+
+Velocidad sacrificada en beneficio de la portabilidad. Requiera equipos más potentes.
+La portabilidad puede ser también una desventajas ya que dependen de los frameworks de JAVA están extendidos, .NET actualmente solo se usa en WINDOWS
+En general exigen más recursos (RAM y procesador)
