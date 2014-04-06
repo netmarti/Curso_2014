@@ -1,0 +1,49 @@
+/*
+ *Conversor básico con las variables de fahrenheit y celsius iniciadas en 1
+ */
+
+package tiempo;
+
+/**
+ *
+ * @author dan
+ */
+public class Tiempo {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        float fah = 1;
+        System.out.print(fah+" grados Fahrenheit son...");
+        //Pasar de Fah a Cel
+        //Empezamos por restar 32
+        
+        fah = fah - 32;
+        
+        //Dividimos el resultado por 9
+        
+        fah = fah/9;
+        
+        //Multiplicamos el resultado por 5
+        
+        fah = fah*5;
+        
+        System.out.println(fah+" grados Celsius\n");
+        float cel = 1;
+        System.out.println(cel+" grados Celsius son...");
+        
+        //Pasar Fah a Cel
+        //restamos 9
+        //Dividimos el resultado entre 5
+        
+        cel = cel/5;
+        
+        //Añadimos 32 al resultado
+        
+        cel = cel+32;
+        System.out.println(cel+" grados Fahrenheit");
+    }
+    
+}
