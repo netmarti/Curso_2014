@@ -1,6 +1,7 @@
 package controller;
 
 import beans.Ave;
+
 import beans.Mamifero;
 import beans.Mascota;
 import beans.Pez;
@@ -17,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author dan
  */
-public class nuevaMascota extends HttpServlet {
+public class NuevaMascota extends HttpServlet {
 
     /**
      *propriedad de la clase nuevaMascota, ArrayList con la listaMascotas
@@ -40,11 +41,11 @@ public class nuevaMascota extends HttpServlet {
         //guardo los parametros enviados por el formulario
         
         String chip = request.getParameter("chip");
-        String tipoMascota = request.getParameter("chip");
+        String tipoMascota = request.getParameter("tipoMascota");
         String nomMascota = request.getParameter("nomMascota");
         String alimentacion = request.getParameter("alimentacion");
         String habitat = request.getParameter("habitat");
-        String sangre = request.getParameter("sangre");
+        String sangre = request.getParameter("tipoSangre");
         
         //controlo que los datos esten bien definidos
         if ((chip != null && !chip.equals("")) && (tipoMascota != null && !tipoMascota.equals(""))
@@ -52,7 +53,7 @@ public class nuevaMascota extends HttpServlet {
                 && (habitat != null && !habitat.equals("")) && (sangre != null && !sangre.equals(""))) {
             
             //creo una instancia/objeto de  con los parametros enviado por el formulario
-            Mascota mascota = new Mascota(chip, tipoMascota, nomMascota, alimentacion, habitat, sangre, listaMascotas, null);
+            Mascota mascota = new Mascota(chip, tipoMascota, nomMascota, alimentacion, habitat, sangre);
         
             // creo instancia/objeto con los parámetros enviados del formulario para las mascotas
             
@@ -62,16 +63,16 @@ public class nuevaMascota extends HttpServlet {
             Pez pez = null;
             
             if (tipoMascota.equals("ave")) {
-                ave = new Ave(chip, tipoMascota, nomMascota, alimentacion, habitat, sangre, listaMascotas, mascota, alimentacion);
+                ave = new Ave(chip, tipoMascota, nomMascota, alimentacion, habitat, sangre, alimentacion);
             }
             if (tipoMascota.equals("mamifero")) {
                 mamifero = new Mamifero(alimentacion, chip, tipoMascota, nomMascota, alimentacion, habitat, sangre, listaMascotas, mascota);
             }
             if (tipoMascota.equals("reptil")) {
-                reptil = new Reptil(chip, tipoMascota, nomMascota, alimentacion, habitat, sangre, listaMascotas, mascota, habitat, true);
+                reptil = new Reptil(chip, tipoMascota, nomMascota, alimentacion, habitat, sangre, habitat, true);
             }
             if (tipoMascota.equals("pez")) {
-                pez = new Pez(chip, tipoMascota, nomMascota, alimentacion, habitat, sangre, listaMascotas, mascota, tipoMascota);
+                pez = new Pez(chip, tipoMascota, nomMascota, alimentacion, habitat, sangre, "Acuario grande");
             }
             
             //ahora, lo que no quiero hacer es añadir una mascota a la lista si ésta
@@ -88,21 +89,21 @@ public class nuevaMascota extends HttpServlet {
             if (index == -1) {
                 //controlo que tipo de mascota y lo añado a la lista
                 if (tipoMascota.equals("ave")) {   
-                    mascota.addMascota(ave);
+                    listaMascotas.add(ave);
                 }
                 
                 if (tipoMascota.equals("pez")) {
                     
-                    mascota.addMascota(pez);  
+                    listaMascotas.add(pez); 
                 }
                 
                 if (tipoMascota.equals("mamifero")) {
                     
-                    mascota.addMascota(mamifero);     
+                    listaMascotas.add(mamifero);    
                 }
                 
                 if (tipoMascota.equals("reptil")) {    
-                    mascota.addMascota(reptil);  
+                     listaMascotas.add(reptil);  
                 }
                 
                 listaMascotas.add(mascota);
@@ -110,7 +111,11 @@ public class nuevaMascota extends HttpServlet {
             }
             // si la mascota existe
             
-            else{
+            //ESTO LO HE ANULADO PARA EVITAR FALLOS PERO HAY QUE PONERLO
+            
+            
+            
+           /* else{
             
                 //guardo la mascota existente en una variable mascotaTmp
                 Mascota mascotaTmp = listaMascotas.get(index);
@@ -141,7 +146,7 @@ public class nuevaMascota extends HttpServlet {
                 //mascota.set(index, mascotaTmp) es un metodo que guarda el objeto mascotaTmp en la posicion
                 //index de la listaMascotas
                 listaMascotas.set(index, mascotaTmp);
-            }
+            }*/
             
         try {
             /* TODO output your page here. You may use following sample code. */
@@ -210,7 +215,13 @@ public class nuevaMascota extends HttpServlet {
     }// </editor-fold>
 
     private int getChip(String chip) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+       int encontrado=-1;
+       
+      //HAY QUE DEFINIR LA BUSQUEDA
+       
+       return encontrado;
+    
     }
 
 }//cierra el documento
