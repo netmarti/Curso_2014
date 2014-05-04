@@ -77,10 +77,11 @@ public class NuevaMascota extends HttpServlet {
             
             //ahora, lo que no quiero hacer es añadir una mascota a la lista si ésta
             //ya existe en la lista
-            //para poder hacer esto, busco la categoria (por chip) en la lista listaMascotas
+            //para poder hacer esto, busco la mascota (por chip) en la lista listaMascotas
             int index = -1;
+            String mensaje="";  //DECLARO UNA VARIABLE POR SI EXISTE
             
-             //llamo una funcion que busca una categoria por chip en la listaMascotas
+             //llamo una funcion que busca una mascota por chip en la listaMascotas
             
             index= getChip(chip);
             
@@ -111,7 +112,12 @@ public class NuevaMascota extends HttpServlet {
             }
             // si la mascota existe
             
-            //ESTO LO HE ANULADO PARA EVITAR FALLOS PERO HAY QUE PONERLO
+            //SI EXISTE NO LA AÑADO
+            else{
+                
+                String mensaje="Tu mascota ya existe";
+                
+            }
             
             
             
@@ -158,6 +164,7 @@ public class NuevaMascota extends HttpServlet {
             out.println("<body>");
             out.println("<h1>Listado de mascotas por categorias</h1>");
             
+            out.println(mensaje+"<br/>);
             //imprimo el contenido de la lista categoriasList en el HTML
                 for (int i = 0; i < listaMascotas.size(); i++) {
                     Mascota mascotaTmp = listaMascotas.get(i);
