@@ -2,7 +2,7 @@ package beans;
 import java.util.ArrayList;
 
 /**
- *
+ *Clase padre de Ave, Mamifero, Reptil, Pez
  * @author dan
  */
 public class Mascota {
