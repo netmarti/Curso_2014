@@ -115,7 +115,7 @@ public class NuevaMascota extends HttpServlet {
             //SI EXISTE NO LA AÑADO
             else{
                 
-                String mensaje="Tu mascota ya existe";
+                 mensaje="Tu mascota ya existe";
                 
             }
             
