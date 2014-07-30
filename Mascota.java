@@ -19,18 +19,18 @@ public class Mascota {
      *Creamos el ArrayList con la listaMascotas donde almacenar las nuevas mascotas
      */
     protected ArrayList<Mascota> listaMascotas;
-    private Mascota ArrayList;
+  //  private Mascota ArrayList;
 
     //creamos el constructor de la clase Mascota
-    public Mascota(String chip, String tipoMascota, String nomMascota, String alimentacion, String habitat, String sangre, ArrayList<Mascota> listaMascotas, Mascota ArrayList) {
+    public Mascota(String chip, String tipoMascota, String nomMascota, String alimentacion, String habitat, String sangre) {
         this.chip = chip;
         this.tipoMascota = tipoMascota;
         this.nomMascota = nomMascota;
         this.alimentacion = alimentacion;
         this.habitat = habitat;
         this.sangre = sangre;
-        this.listaMascotas = listaMascotas;
-        this.ArrayList = ArrayList;
+      //  this.listaMascotas = listaMascotas;
+      //  this.ArrayList = ArrayList;
     }
 
     public String getChip() {
@@ -81,7 +81,7 @@ public class Mascota {
         this.sangre = sangre;
     }
 
-    public ArrayList<Mascota> getListaMascotas() {
+   /* public ArrayList<Mascota> getListaMascotas() {
         return listaMascotas;
     }
 
@@ -96,7 +96,7 @@ public class Mascota {
     public void setArrayList(Mascota ArrayList) {
         this.ArrayList = ArrayList;
     }
-
+*/
     @Override
     public String toString() {
         return "Mascota{" + "chip=" + chip + ", tipoMascota=" + tipoMascota + ", nomMascota=" + nomMascota + ", alimentacion=" + alimentacion + ", habitat=" + habitat + ", sangre=" + sangre + ", listaMascotas=" + listaMascotas + ", ArrayList=" + ArrayList + '}';
